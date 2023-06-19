@@ -46,12 +46,12 @@
     .head .heading {
         display: none;
     }
-    header .icon {
+    /* header ::icon {
         display: none;
-    }
-    header .flex {
+    } */
+    /* header .flex {
         display: none;
-    }
+    } */
     .barIcon {
         display: block;
         position: absolute;
@@ -63,13 +63,13 @@
         bottom: 140px;
         height: 0px;
     }
-    header .navbar {
+    /* header .navbar {
         position: absolute;
         display: block;
-    }
-    header ul li {
+    } */
+    /* header ul li {
         margin-bottom: 20px;
-    }
+    } */
     .Main {
         height: 100vh;
         width: 100vw;
@@ -247,7 +247,7 @@
         position: relative;
         top: 813px;
     }
-}
+    }
 }
 #SweetHome{
     height: 100vh;
@@ -454,11 +454,7 @@
 .mid-content{
     display: flex;
 }
-#sid-box2{
-    /* display: flex;
-    flex-direction: columns; */
-    /* align-items: center; */
-}
+
 .mg{
     position: relative;
     left: 0px;
@@ -506,9 +502,7 @@
     border-bottom: 2px solid blue;
     /* width: 40%; */
 }
-.reimage1{
 
-}
 .mainfake1 {
     display: flex;
     flex-direction: row;
