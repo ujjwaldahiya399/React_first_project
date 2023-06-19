@@ -100,7 +100,7 @@ function Home() {
                   <h3 className="letfull">{data1[28].title} </h3>
                 </Link>
               </div>
-              <section className="RightSideSet">
+              <section className="Set">
                 <div id="TopRight">
                   <img
                     className="sideTopImg"

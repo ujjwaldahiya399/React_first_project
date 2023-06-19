@@ -91,7 +91,7 @@ function Info() {
             </div>
           </div>
         </div>
-        <p>More From Siren</p>
+        <h2 className="more">More From Siren</h2>
         <div className="moreFromSameCategory">
           <div className="firstDiv">
               <img className="imgg" src={ newDataShow !== undefined ? newDataShow[2].urlToImage:dataShow[2].urlToImage} />

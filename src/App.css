@@ -72,6 +72,15 @@
   flex-direction: column;
   border-bottom: 5px solid deeppink;
 }
+.somenm{
+  width: 90%;
+  height: 68vh;
+}
+@media only screen and (max-width:500px) {
+  .somenm{
+    height: 45vh;
+  }
+} 
 .rightSide {
   width: 45vw;
 }

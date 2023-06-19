@@ -51,7 +51,7 @@ export default function Articles() {
                         <div className="article" key={index}>
                             <img src={article.urlToImage}
                                 className="thumbnail"
-                                alt="Image loading..."
+                                alt=" loading..."
                              />
                              <div className="text-container">
                                 <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/info/${article.title}`} state={{article:article,data:data}}><p className="title">{article.title}</p></Link>

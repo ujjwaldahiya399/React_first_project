@@ -60,7 +60,7 @@ function TopPosts({ props }) {
                                     alt="imageshow"
                                 />
                                 <div className='text-content2'>
-                                    <Link style={{textDecoration:"none",color:"black"}} to={`/Info/${article.title}`} state={ {article:article} } className='anchor2'>
+                                    <Link style={{textDecoration:"none",color:"black"}} to={`/Info/${article.title}`} state={ {article:article,data:data} } className='anchor2'>
                                         <p className='title'>{article.title}</p>
                                     </Link>
                                     {/* <p className='content'>{article.content}</p> */}

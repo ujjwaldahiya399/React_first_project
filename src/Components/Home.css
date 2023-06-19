@@ -46,12 +46,12 @@
     .head .heading {
         display: none;
     }
-    /* header ::icon {
+    header .icon {
         display: none;
-    } */
-    /* header .flex {
+    }
+    header .flex {
         display: none;
-    } */
+    }
     .barIcon {
         display: block;
         position: absolute;
@@ -63,13 +63,13 @@
         bottom: 140px;
         height: 0px;
     }
-    /* header .navbar {
+    header .navbar {
         position: absolute;
         display: block;
-    } */
-    /* header ul li {
+    }
+    header ul li {
         margin-bottom: 20px;
-    } */
+    }
     .Main {
         height: 100vh;
         width: 100vw;
@@ -247,7 +247,7 @@
         position: relative;
         top: 813px;
     }
-    }
+}
 }
 #SweetHome{
     height: 100vh;
@@ -259,6 +259,11 @@
     color: greenyellow;
 }
 .Topver{
+    /* display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+    height: 60vh; */
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -266,7 +271,16 @@
     height: 60vh;
     /* border: 1px solid hotpink; */
 }
+.Set {
+    width:35vw;
+    height: 60vh;
+    margin-top: 1em;
+}
 .Topper{
+    /* padding: 12px 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
     padding: 12px 23px;
     display: flex;
     justify-content: center;
@@ -284,7 +298,7 @@
 #TopLeft{
     height: 98%;
     width: 60%;
-    /* border: 1px solid purple; */
+    /* border: 1px so */
 }
 #TopRight{
     height: 48%;
@@ -292,6 +306,7 @@
 }
 #BottomRight{
     height: 48%;
+    margin-top: 0.5em;
 }
 .topImg{
     height: 100%;
@@ -350,15 +365,18 @@
     margin-left: 4em;
     margin-top: 2em;
     gap: 50px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .divForLatestArticle {
     width:55%
 }
 .hum {
-    width: 35vw;
+    width: 30%;
     margin-top: 5em;
-    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    margin-right: 3em;
+    align-items: flex-start;
 }
 .newDiv{
     display: flex;
@@ -395,7 +413,8 @@
 }
 .rightSide{
     display: flex;
-    width: 80%;
+    width: 70%;
+    margin-top: 2em;
 }
 .side-diff{
     width: 87%;
@@ -454,7 +473,11 @@
 .mid-content{
     display: flex;
 }
-
+#sid-box2{
+    /* display: flex;
+    flex-direction: columns; */
+    /* align-items: center; */
+}
 .mg{
     position: relative;
     left: 0px;
@@ -502,7 +525,9 @@
     border-bottom: 2px solid blue;
     /* width: 40%; */
 }
+.reimage1{
 
+}
 .mainfake1 {
     display: flex;
     flex-direction: row;
@@ -513,11 +538,12 @@
     width: 100px;
     background-color: red;
 }
-@media (max-width:500px) {
+@media only screen and (max-width:500px) {
     .Topper{
         display: flex;
         flex-direction: column;
     }
+    
     .divToCheck{
         background-color: green;
     }
@@ -527,6 +553,14 @@
         width: 90vw;
         /* height: 20vh; */
     }
+    .computer {
+        height: 1vh;
+    }
+    .Set {
+        width: 100%;
+        /* margin-top: 2em; */
+        height: 40vhvh;
+    }
     .RightSideSet{
         width: 90vw;
     }
@@ -534,6 +568,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: 38vh;
         align-items: center;
     }
     .topImg,.sideTopImg,.sideImg{
@@ -555,6 +590,7 @@
     .sid-box{
         display: flex;
         width: 90vw;
+        margin-top: 2em;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -595,15 +631,11 @@
     .hum {
         display: flex;
         flex-direction: column;
+        width: 90vw;
         justify-content: center;
-        width:90vw;
         align-items: center;
     }
     .newDiv{
-        margin-left: 1.4em;
-    }
-    .rightSide{
-        width: 90vw;
-        margin-top: 2em;;
+        margin-left: 2em;
     }
 }

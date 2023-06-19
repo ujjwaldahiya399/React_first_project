@@ -132,3 +132,36 @@ hr{
     display: flex;
     width: 100%;
 }
+@media only screen and (max-width:500px) {
+    .moreFromSameCategory {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }    
+    .secondDiv{
+        margin-top: 2em;
+    }
+    .firstDiv{
+        margin-bottom: 2em;
+    }
+    .thirdDiv{
+        margin-top: 2em;
+    }
+    .land{
+        width: 80vw;
+        display: block;
+    }
+    .socialMediaAccs {
+        width: 50%;
+        margin-left: 7em;
+        margin-bottom: 2em;
+    }
+    .infoOfArticle{
+        height: 9vh;
+        margin-left: 2em;
+    }
+    .more {
+        margin-top: 2em;
+    }
+}

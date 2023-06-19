@@ -63,8 +63,8 @@ function LatestArticles(props) {
             >
                 Load More ⬇️
             </p>
-            <div >
-                <img style={{width:"100%",height:"61vh"}} src={data5[49].urlToImage} alt="alt" id="bigImg" />
+            <div className="somenm" >
+                <img style={{width:"100%",height:"100%"}} src={data5[49].urlToImage} alt="alt" id="bigImg" />
                 {/* <p className="baada">{data5[55].content}</p> */}
                 <p className='published'>{data5[66].publishedAt}</p>
             </div>
