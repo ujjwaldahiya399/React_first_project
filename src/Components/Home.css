@@ -1,0 +1,608 @@
+.imgs{
+    display: flex;
+    height: 25%;
+    width: 90vw;
+    margin-top:3em;
+    margin-left: 5.6em;
+}
+.bigImg{
+    display: flex;
+    height: 50vh;
+    width: 50vw;
+
+}
+.img1{
+    width: 100%;
+}
+.samllImg{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    height: 50vh;
+}
+.smlImg1{
+    display: flex;
+    height: 50%;
+    width: 38vw;
+}
+.smlImg2{
+    margin-top: 1em;
+
+}
+@media screen and (max-width: 680px) {
+    body {
+
+    .TopTitle {
+        position: relative;
+        right: 270px;
+    }
+    .paddingSmall {
+        position: relative;
+        top: 10px;
+    }
+    .navbar {
+        width: 100vw;
+    }
+    .head .heading {
+        display: none;
+    }
+    header .icon {
+        display: none;
+    }
+    header .flex {
+        display: none;
+    }
+    .barIcon {
+        display: block;
+        position: absolute;
+        bottom: 65px;
+        right: 100px;
+    }
+    .navbar li{
+        position: relative;
+        bottom: 140px;
+        height: 0px;
+    }
+    header .navbar {
+        position: absolute;
+        display: block;
+    }
+    header ul li {
+        margin-bottom: 20px;
+    }
+    .Main {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .NewsPage {
+        height: 50%;
+        width: 95%;
+        padding: 10px 8px;
+        grid-area: 1/1/5/7;
+    }
+    .articuno {
+        width: 99%;
+    }
+    .sideNews {
+        height: 50%;
+        width: 100%;
+        grid-area: 6/1/8/7;
+    }
+    .Richu {
+        position: relative;
+    }
+    .side-cont {
+        width: 65%;
+    }
+    .repic {
+        min-width: 36%;
+        min-height: 95%;
+        max-width: 30%;
+        max-height: 95%;
+        margin-right: 10px;
+    }
+    .pikachu {
+        width: 96%;
+    }
+    .St-cont {
+        width: 98%;
+    }
+    /* Info */
+    #LeadT {
+        width: 70%;
+    }
+    #LeadD {
+        width: 70%;
+    }
+    #LeadC {
+        width: 70%;
+    }
+    #LeadP {
+        position: relative;
+        right: 12%;
+    }
+    .shareLeft {
+        position: fixed;
+        top: 600px;
+    }
+    .BacktoHome {
+        position: relative;
+        left: 27%;
+    }
+    .giver {
+        position: relative;
+        right: 12%;
+    }
+    .homi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .Boxxer {
+        width: 100%;
+        align-items: center;
+    }
+    .ReDown {
+        width: 100%;
+    }
+    .text-wid {
+        width: 65%;
+    }
+    #TopLeft {
+        grid-area: 1/1/3/5;
+    }
+    .RightSideSet {
+        grid-area: 2/1/5/5;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-gap: 1rem;
+        position: relative;
+        top: 55px;
+        left: 10px;
+    }
+    #TopRight {
+        grid-area: 1/1/3/7;
+    }
+    .letfull{
+        position: relative;
+        bottom: 110px;
+    }
+    #BottomRight {
+        grid-area: 2/1/7/7;
+        position: relative;
+        top: 68px;
+    }
+    .Topver {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+    .topImg {
+        height: 18vh;
+        width: 80vw;
+    }
+    .sideTopImg {
+        height: 18vh;
+        width: 77vw;
+    }
+    .sideImg {
+        height: 18vh;
+        width: 77vw;
+    }
+    /* Latest*/
+    .UpSide {
+        position: relative;
+        top: 70px;
+    }
+    .gasli {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .Top-let {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+    .mg {
+        min-width: 90%;
+        min-height: 50%;
+        max-width: 90%;
+        max-height: 50%;
+    }
+    .const {
+        width: 90%;
+        padding: 0px 50px;
+    }
+    /* MidPart or side by sid wala */
+    .midpart {
+        display: flex;
+        flex-direction: column;
+        padding: 12px 20px;
+        position: relative;
+        top: 70px;
+    }
+    .mainFirst {
+        width: 99%;
+    }
+    .BigigImg {
+        display: none;
+    }
+    .AD {
+        display: none;
+    }
+    .someName {
+        /* width: 100%; */
+        width: 30vw;
+
+
+    }
+    /*Latest Storis  */
+    .DownSide {
+        position: relative;
+        top: 813px;
+    }
+}
+}
+#SweetHome{
+    height: 100vh;
+    width: 100vw;
+}
+.computer
+{
+    text-decoration: none;
+    color: greenyellow;
+}
+.Topver{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+    height: 60vh;
+    /* border: 1px solid hotpink; */
+}
+.Topper{
+    padding: 12px 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.RightSideSet{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    width: 40%;
+    padding: 12px 3px;
+}
+
+#TopLeft{
+    height: 98%;
+    width: 60%;
+    /* border: 1px solid purple; */
+}
+#TopRight{
+    height: 48%;
+    /* border: 1px solid blue; */
+}
+#BottomRight{
+    height: 48%;
+}
+.topImg{
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+}
+.sideTopImg{
+    border-radius: 12px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.letfull{
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+}
+.topRight{
+    position: relative;
+    bottom: 150px;
+    text-align: center;
+}
+.bottomright{
+    position: relative;
+    bottom: 150px;
+    text-align: center;
+}
+.sideImg{
+    border-radius: 12px;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.lines
+{
+    border-bottom: 3px solid red;
+    width: 250px;
+}
+.line{
+    margin-left: 2.4em;
+}
+.lM{
+    cursor: pointer;
+}
+.mainFirst{
+    width: 90%;
+    display: flex;
+    padding: 12px 3px;
+    margin-bottom: 3em;
+    border-bottom: 1px solid green;
+}
+.both
+{
+    display: flex;
+    width: 100vw;
+    margin-left: 4em;
+    margin-top: 2em;
+    gap: 50px;
+    justify-content: space-between;
+}
+.divForLatestArticle {
+    width:55%
+}
+.hum {
+    width: 40%;
+    margin-top: 5em;
+}
+.newDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+    width: 18em;
+    border: 2px solid rgb(229, 225, 225);
+    height: 30em;
+    /* margin-top: 3em; */
+}
+.mmypic{
+    min-width: 23%;
+    max-width: 30%;
+    min-height: 18%;
+    margin-right: 20px;
+}
+.myhr{
+    width: 99%;
+    position: relative;
+    right: 0%;
+}
+
+/* ReTop */
+.firstPage{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid magenta;
+
+}
+
+.hunter{
+    height: 55vh;
+}
+.rightSide{
+    display: flex;
+}
+.side-diff{
+    width: 87%;
+}
+
+/* Latest Story */
+.DownSide{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 25px;
+    padding: 6px 12px;
+    margin: 0px 12px;
+
+}
+.gasli{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.kasama{
+    border-right: 4px solid rgb(242, 239, 235);
+}
+.side-box{
+    align-items: center;
+    margin: 0px 12px;
+    padding: 0px 3px;
+    width: 85%;
+}
+.shiro{
+    
+    background-color: rgb(241, 233, 233);
+    width: 100%;
+}
+
+/* The latest */
+
+.const{
+    width: 87%;
+    padding: 0px 12px;
+}
+.UpSide{
+    padding: 3px 26px;
+}
+.gasli{
+    justify-content: center;
+}
+.Top-let{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 12px 12px;
+}
+.mid-content{
+    display: flex;
+}
+#sid-box2{
+    /* display: flex;
+    flex-direction: columns; */
+    /* align-items: center; */
+}
+.mg{
+    position: relative;
+    left: 0px;
+    min-width: 56%;
+    min-height: 38%;
+    max-width: 56%;
+    max-height: 38%;
+    margin-right: 20px;
+}
+/* Home pe Big Image */
+
+#bigImg{
+    display: block;
+    height: 100%;
+    /* width: 45vw; */
+    width: 550px;
+    border: 1px solid red;
+}
+.baada
+{
+    width: 500px;
+}
+.BigigImg{
+    display: flex;
+    justify-content: center;
+    height: 37.3vw;
+    width: 60vw;
+    padding: 12px 23px;
+}
+.Bimg{
+    padding: 12px 23px;
+}
+.reimage
+{
+    width: 300px;
+    height: 200px;
+    margin-top: 10px;
+}
+.mainfake
+{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid blue;
+    /* width: 40%; */
+}
+.reimage1{
+
+}
+.mainfake1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+}
+.divToCheck {
+    display: flex;
+    width: 100px;
+    background-color: red;
+}
+@media (max-width:500px) {
+    .Topper{
+        display: flex;
+        flex-direction: column;
+    }
+    .divToCheck{
+        background-color: green;
+    }
+    .Topver{
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        /* height: 20vh; */
+    }
+    .RightSideSet{
+        width: 90vw;
+    }
+    #TopLeft,#TopRight {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .topImg,.sideTopImg,.sideImg{
+        width: 90vw;
+    }
+    .UpSide{
+        margin-top:25em
+    }
+    .gasli{
+        display: flex;
+        flex-direction: column;
+    }
+    .Top-let{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .sid-box{
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1em;
+        
+    }
+    .mg{
+        min-width: 100%;
+        min-height: 38%;
+        max-width: 100%;
+        max-height: 38%;
+        
+        /* margin-right: 20px; */
+    }
+    .both{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 1em;
+    }
+    .divForLatestArticle{
+        width:90vw;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .mainFirst{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mmypic{
+        display: flex;
+        height:29vw
+    }
+    .hum {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .newDiv{
+        margin-left: 2em;
+    }
+}

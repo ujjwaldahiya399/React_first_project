@@ -1,0 +1,32 @@
+.container2{
+    width:35vw;
+    margin-top:1em;
+}
+.article2{
+    width:35vw;
+    border-bottom: solid 1px grey;
+    margin-bottom:3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.image2{
+    min-width: 48%;
+    min-height: 18%;
+    max-width: 48%;
+    max-height: 18%;
+}
+.advertize{
+    margin-top: 4em;
+    height: 35em;
+}
+.advertisementBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    width: 25em;
+    color: black;
+    font-weight: bolder;
+    height: 100%;
+}

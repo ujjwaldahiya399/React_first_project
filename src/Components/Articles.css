@@ -1,0 +1,53 @@
+
+.article{
+    border-bottom: solid 2px rgb(236, 231, 231);
+    margin: 1em;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    gap: 0.5em;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+}
+.thumbnail {
+    min-width: 50%;
+    min-height: 15%;
+    max-width: 50%;
+    max-height: 15%;
+}
+.articles-container{
+    width:40vw;
+    margin-left: 3em;
+}
+.title {
+    font-weight: bolder;
+
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    margin-left: 2em;
+    justify-content: space-between;
+}
+.content {
+    font-weight: lighter;
+
+}
+.published {
+    font-size: smaller;
+}
+.progressContainer{
+    display: block;
+    justify-content: center;
+    margin-top: 2em;
+}
+.loadMoreBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+}
+.divForTopPosts{
+    margin-right: 4em;
+}

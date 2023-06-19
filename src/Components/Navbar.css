@@ -1,0 +1,21 @@
+.App{
+    margin: 0px;
+    padding: 0px;
+  }
+  .linkDiv{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5em;
+    /* background-color: blue; */
+    
+  }
+  .link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 0.7em;
+  }
+  hr {
+    width: 90vw;
+    color: rgb(228, 219, 219) 
+  }
