@@ -356,8 +356,9 @@
     width:55%
 }
 .hum {
-    width: 40%;
+    width: 35vw;
     margin-top: 5em;
+    margin-right: 2em;
 }
 .newDiv{
     display: flex;
@@ -394,6 +395,7 @@
 }
 .rightSide{
     display: flex;
+    width: 80%;
 }
 .side-diff{
     width: 87%;
@@ -600,9 +602,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width:90vw;
         align-items: center;
     }
     .newDiv{
-        margin-left: 2em;
+        margin-left: 1.4em;
+    }
+    .rightSide{
+        width: 90vw;
+        margin-top: 2em;;
     }
 }

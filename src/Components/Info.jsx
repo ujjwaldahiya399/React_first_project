@@ -3,14 +3,21 @@ import './Info.css';
 import axios from "axios";
 import { useLocation, useNavigate,Link } from "react-router-dom";
 function Info() {
-  let [data,setData] = useState();
+  // let [data,setData] = useState();
   const [loaded, setLoaded] = useState(false);
   let infoFromLink = useLocation().state;
+  console.log(infoFromLink);
   // let params = useLocation().state.paramsFromLink
   // let category = infoFromLink.paramFromLink.category;
-  console.log(infoFromLink.data.articles)
-  let dataShow = infoFromLink.data.articles;
-  console.log(infoFromLink);
+  console.log(infoFromLink.data)
+
+  let dataShow = infoFromLink.data;
+  console.log(dataShow);
+  let newDataShow = infoFromLink.data.articles
+  console.log(newDataShow)
+  // let dataShowFromArticlesPage;
+  // infoFromLink.article[21] !=="" ? dataShowFromArticlesPage = infoFromLink.article[21] : dataShowFromArticlesPage = ""
+  // console.log(dataShowFromArticlesPage)
   // console.log(infoFromLink.article.title, infoFromLink.urltoImage);
   let navigate = useNavigate();
   
@@ -87,33 +94,33 @@ function Info() {
         <p>More From Siren</p>
         <div className="moreFromSameCategory">
           <div className="firstDiv">
-              <img className="imgg" src={dataShow[2].urlToImage}/>
+              <img className="imgg" src={ newDataShow !== undefined ? newDataShow[2].urlToImage:dataShow[2].urlToImage} />
               <h2>Joshua Tree<br/> Overnight</h2>
-              <p>To read more... <a href= {dataShow[2].url}>Click Here</a></p>
+              <p>To read more... <a href= { newDataShow !== undefined ? newDataShow[2].url:dataShow[2].url }>Click Here</a></p>
               <div className="oneMore">
                 <img style={{display:"flex",width:"4em"}} id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{dataShow[2].author}</p>
-                <p style={{marginLeft:"1em"}} >{dataShow[2].publishedAt}</p>
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[2].author:dataShow[2].author }</p>
+                <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[2].publishedAt:dataShow[2].publishedAt }</p>
               </div>
           </div>
           <div className="secondDiv">
-            <img src={dataShow[3].urlToImage}/>
+            <img src={ newDataShow !== undefined ? newDataShow[0].urlToImage:dataShow[0].urlToImage }/>
             <h2>Joshua Tree<br/> Overnight</h2>
-            <p>To read more... <a href= {dataShow[3].url}>Click Here</a></p>
+            <p>To read more... <a href= { newDataShow !== undefined ? newDataShow[0].url:dataShow[0].url }>Click Here</a></p>
             <div className="oneMore">
                 <img style={{display:"flex",width:"4em"}} id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{dataShow[3].author}</p>
-                <p style={{marginLeft:"1em"}} >{dataShow[3].publishedAt}</p>
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[0].author:dataShow[0].author }</p>
+                <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[0].publishedAt:dataShow[0].publishedAt }</p>
               </div>
           </div>
           <div className="thirdDiv">
-            <img src={dataShow[4].urlToImage}/>
+            <img src={ newDataShow !== undefined ? newDataShow[1].urlToImage:dataShow[1].urlToImage }/>
             <h2>Joshua Tree<br/> Overnight</h2>
-            <p>To read more... <a href= {dataShow[4].url}>Click Here</a></p>
+            <p>To read more... <a href= { newDataShow !== undefined ? newDataShow[1].url:dataShow[1].url }>Click Here</a></p>
             <div className="oneMore">
                 <img style={{display:"flex",width:"4em"}} id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{dataShow[4].author}</p>
-                <p style={{marginLeft:"1em"}} >{dataShow[4].publishedAt}</p>
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[1].author:dataShow[1].author}</p>
+                <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[1].publishedAt:dataShow[1].publishedAt }</p>
               </div>
           </div>
         </div>

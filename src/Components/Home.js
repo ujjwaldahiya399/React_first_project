@@ -84,7 +84,6 @@ function Home() {
     return (
       <>
         {/* <Navbar /> */}
-        <div className="divToCheck">hii</div>
         <div id="SweetHome">
           <div className="Topper">
             <section className="Topver">
@@ -97,7 +96,7 @@ function Home() {
                     console.log("Having Error");
                   }}
                 />
-                <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data1[28].title}`} state={{article:data1[28]}} className="computer">
+                <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data1[28].title}`} state={{article:data1[28],data:[data1[11],data1[23],data1[39]]}} className="computer">
                   <h3 className="letfull">{data1[28].title} </h3>
                 </Link>
               </div>
@@ -108,7 +107,7 @@ function Home() {
                     src={data2[30].urlToImage}
                     alt="load"
                   />
-                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data2[30].title}`} state={{article:data2[30]}} className="computer">
+                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data2[30].title}`} state={{article:data2[30],data:[data2[11],data2[23],data2[39]]}} className="computer">
                     <h5 className="topRight">{data2[30].title} </h5>
                   </Link>
                 </div>
@@ -118,7 +117,7 @@ function Home() {
                     src={data3[40].urlToImage}
                     alt="load"
                   />
-                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data3[40].title}`} state={{article:data3[40]}} className="computer">
+                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data3[40].title}`} state={{article:data3[40],data:[data3[11],data3[23],data3[39]]}} className="computer">
                     <h5 className="bottomright">{data3[40].title} </h5>
                   </Link>
                 </div>
@@ -133,7 +132,7 @@ function Home() {
               <div className="Top-let">
                 <div className="sid-box">
                   <img src={data1[39].urlToImage} alt="go" className="mg" />
-                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data1[39].title}`} state={{article:data1[39]}}>
+                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data1[39].title}`} state={{article:data1[39],data:[data1[41],data1[23],data1[39]]}}>
                     <h4 className="const">{data1[39].title} </h4>
                   </Link>
                   <p className="const">{data3[61].content}</p>
@@ -141,7 +140,7 @@ function Home() {
                 </div>
                 <div id="sid-box2" className="sid-box">
                   <img src={data3[61].urlToImage} alt="go" className="mg" />
-                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data3[61].title}`} state={{article:data3[61]}}>
+                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data3[61].title}`} state={{article:data3[61],data:[data3[11],data3[23],data3[39]]}}>
                     <h4 className="const">{data3[61].title} </h4>
                   </Link>
                   <p className="const">{data1[17].content}</p>
@@ -149,7 +148,7 @@ function Home() {
                 </div>
                 <div className="sid-box">
                   <img src={data4[11].urlToImage} alt="go" className="mg" />
-                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data4[11].title}`} state={{article:data4[11]}}>
+                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data4[11].title}`} state={{article:data4[11],data:[data4[11],data4[23],data4[39]]}}>
                     <h4 className="const">{data4[11].title} </h4>
                   </Link>
                   <p className="const">{data4[11].content}</p>

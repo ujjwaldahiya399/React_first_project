@@ -23,7 +23,7 @@ function LatestStories(props) {
       <div className="gasli">
         <div className="kasama">
           <div className="side-box">
-            <Link style={{textDecoration:"none"}} to={`/Info/${data1[0].title}`} state={{article:data1[0]}}>
+            <Link style={{textDecoration:"none"}} to={`/Info/${data1[0].title}`} state={{article:data1[0],data:[data1[11],data1[21],data1[31]]}}>
               <h3 style={{color:"black",fontWeight:"bold"}}  className="heading">{data1[0].title} </h3>
             </Link>
             <p className="cont">{data1[0].content}</p>
@@ -33,7 +33,7 @@ function LatestStories(props) {
         </div>
         <div className="kasama">
           <div className="side-box">
-            <Link style={{textDecoration:"none"}} to={`/Info/${data2[0].title}`} state={{article:data2[0]}}>
+            <Link style={{textDecoration:"none"}} to={`/Info/${data2[0].title}`} state={{article:data2[0],data:[data2[11],data2[21],data2[31]]}}>
               <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data2[0].title} </h3>
             </Link>
             <p className="cont">{data2[0].content}</p>
@@ -43,7 +43,7 @@ function LatestStories(props) {
         </div>
         <div className="kasama">
           <div className="side-box">
-            <Link style={{textDecoration:"none"}} to={`/Info/${data1[59].title}`} state={{article:data1[0]}}>
+            <Link style={{textDecoration:"none"}} to={`/Info/${data1[59].title}`} state={{article:data1[0],data:[data1[11],data1[21],data1[31]]}}>
               <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data1[59].title} </h3>
             </Link>
             <p className="cont">{data1[59].content}</p>

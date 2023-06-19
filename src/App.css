@@ -9,7 +9,6 @@
     font-weight: bolder;
 }
 
-/* OUR CODE HERE*/
 .head
 {
   text-align: center;
@@ -72,6 +71,9 @@
   align-items: center;
   flex-direction: column;
   border-bottom: 5px solid deeppink;
+}
+.rightSide {
+  width: 45vw;
 }
 .text-content2
 {
