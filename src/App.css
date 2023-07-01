@@ -410,3 +410,25 @@ header li{
     padding: 20px;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .latestArticleDiv {
+    width: 90vw;
+  }
+  .mainFirst {
+    /* display: flex;
+    flex-direction: column */
+    width: 40%;
+  }
+  .sistum {
+    width: 60%;
+  }
+  .mainFirst {
+    width: 60%;
+  }
+  .somenm {
+    width: 63%;
+    height: 142vh;
+  }
+  
+
+}

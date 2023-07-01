@@ -16,15 +16,16 @@ export default function Articles() {
   console.log("Use Params returned:", params);
 //   Loadedindicatesifthedatahasbeenloadedornot;
   const date = new Date();
+  // let  elementId = index > 4 ? 'my-element-id' : '';
   const dateString =
     date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
   useEffect(() => {
-    // var url = "https://blogdata.onrender.com/" + params.category;
-      var url = "https://newsapi.org/v2/everything?q=" +
-      params.category +
-      "&from=" +  // put date string for latest articles
-      "&sortBy=publishedAt&language=en&" +
-      "apiKey=ad2f8f6ee02b4b5daa12032ed92fb380";
+    var url = "https://blogdata.onrender.com/" + params.category;
+      // var url = "https://newsapi.org/v2/everything?q=" +
+      // params.category +
+      // "&from=" +  // put date string for latest articles
+      // "&sortBy=publishedAt&language=en&" +
+      // "apiKey=ad2f8f6ee02b4b5daa12032ed92fb380";
 
     // var req = new Request(url);
     // fetch(req).then((response) => {
@@ -35,7 +36,7 @@ export default function Articles() {
     //   });
     // });
     axios.get(url).then((res) => {
-      console.log(res.data.articles[0]);
+      console.log(res.data);
       setData(res.data);
       setLoaded(true);
     })
@@ -44,11 +45,13 @@ export default function Articles() {
     return (
       <div style={{display:"flex",justifyContent:"space-between",marginTop:"3em"}} className="mainContainer">
         <div className="articles-container">
-            {data.articles.map((article,index) => {
+            {data.map((article,index) => {
                 console.log(count,index);
                 if (index<count) {
                     return (
-                        <div className="article" key={index}>
+                      
+                        <div id= {index >= 4 ? "xxx":"noxxx"} className="article" key={index}>
+                        {/* {console.log(index)} */}
                             <img src={article.urlToImage}
                                 className="thumbnail"
                                 alt=" loading..."
@@ -68,7 +71,7 @@ export default function Articles() {
                     setCount(count+7)
                 }}
                 >
-                Load More <img style={{display:"flex",width:"100%",height:"3em"}} className="dwnArrow" src="https://cdn-icons-png.flaticon.com/128/2989/2989995.png"/>
+                Load More <img alt="loading" style={{display:"flex",width:"100%",height:"3em"}} className="dwnArrow" src="https://cdn-icons-png.flaticon.com/128/2989/2989995.png"/>
             </button>
         </div>
         <div className="divForTopPosts">

@@ -256,6 +256,8 @@
 .computer
 {
     text-decoration: none;
+    /* position: relative;
+    top: 60%; */
     color: greenyellow;
 }
 .Topver{
@@ -638,4 +640,22 @@
     .newDiv{
         margin-left: 2em;
     }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .SweetHome {
+    width: 95vw;
+  }
+  .mainFirst{
+    width: 55vw;
+  }
+  .computer {
+    position: relative;
+    top: 60%;
+  }
+   .letfull {
+    bottom: 300px;
+   }
+   .somenm {
+    height: 57vh;
+   }
 }

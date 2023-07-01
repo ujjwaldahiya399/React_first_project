@@ -96,7 +96,7 @@ function Home() {
                     console.log("Having Error");
                   }}
                 />
-                <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data1[28].title}`} state={{article:data1[28],data:[data1[11],data1[23],data1[39]]}} className="computer">
+                <Link className="someName" style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data1[28].title}`} state={{article:data1[28],data:[data1[11],data1[23],data1[39]]}} className="computer">
                   <h3 className="letfull">{data1[28].title} </h3>
                 </Link>
               </div>

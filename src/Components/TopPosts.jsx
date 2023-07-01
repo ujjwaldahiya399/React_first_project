@@ -7,6 +7,7 @@ import './TopPosts.css';
 function TopPosts({ props }) {
     // const focus = [50, 51, 52, 53];
     const [data, setData] = useState();
+    const [newData,setNewData] = useState();
     const [loaded, setLoaded] = useState(false);
     const params = useParams();
     const [count, setCount] = useState(3);
@@ -34,11 +35,14 @@ function TopPosts({ props }) {
         //     });
         // });
         axios.get(url).then((response) => {
-          console.log(response.data);
+          console.log(response.data.slice(31,response.data.length));
+          setNewData(response.data.slice(31,response.data.length));
+          console.log(newData);
           setData(response.data);
           setLoaded(true)
         })
     }, [params]);
+    
     // let topPostArr = [];
     // for(let i = 12; i <= 16; i++) {
     //   topPostArr.push(data[i]);
@@ -49,7 +53,7 @@ function TopPosts({ props }) {
             <div className='container2'>
                 <h2 className='line'>Top Posts</h2>
                 {/* <h1>{titleString}</h1> */}
-                {data.map((article,index) => {
+                {newData.map((article,index) => {
                     // var article = props[value];
                     if (index < count) {
                         return (
@@ -60,7 +64,7 @@ function TopPosts({ props }) {
                                     alt="imageshow"
                                 />
                                 <div className='text-content2'>
-                                    <Link style={{textDecoration:"none",color:"black"}} to={`/Info/${article.title}`} state={ {article:article,data:data} } className='anchor2'>
+                                    <Link style={{textDecoration:"none",color:"black"}} to={`/Info/${article.title}`} state={ {article:article,data:newData} } className='anchor2'>
                                         <p className='title'>{article.title}</p>
                                     </Link>
                                     {/* <p className='content'>{article.content}</p> */}
