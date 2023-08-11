@@ -13,7 +13,7 @@ function Info() {
 
   let dataShow = infoFromLink.data;
   console.log(dataShow);
-  let newDataShow = infoFromLink.data.articles
+  let newDataShow = infoFromLink.data
   console.log(newDataShow)
   // let dataShowFromArticlesPage;
   // infoFromLink.article[21] !=="" ? dataShowFromArticlesPage = infoFromLink.article[21] : dataShowFromArticlesPage = ""
@@ -45,7 +45,7 @@ function Info() {
             <img className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
             <div className="infoOfArticle">
               <p className="authorName"><b>John Doe</b></p>
-              <p className="dateOfPublish">{infoFromLink.article.publishedAt}</p>
+              <p className="dateOfPublish">2023-10Aug 2:12pm</p>
             </div>
           </div>
           <div className="socialMediaAccs">
@@ -55,11 +55,11 @@ function Info() {
             <img className="youtube" src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" alt="youtube" />
           </div>
         </div>
-        <img className="img" src={infoFromLink.article.urlToImage} alt="infoLoading" />
-        <h3 className="infoTitle"> {infoFromLink.article.title} </h3>
-        <p className="id">{infoFromLink.article.id}</p>
-        <p className="discrption">{infoFromLink.article.description}.To read more... <Link style={{textDecoration:"none"}}>{infoFromLink.url}</Link></p>
-        <p className="authorName"><b>{infoFromLink.article.author}</b></p>
+        <img className="img" src={infoFromLink.article.imageUrl} alt="infoLoading" />
+        <h3 className="infoTitle"> {infoFromLink.article.name} </h3>
+        {/* <p className="id">{infoFromLink.article.id}</p> */}
+        <p className="discrption">{infoFromLink.article.details}.To read more... <Link style={{textDecoration:"none"}}>{infoFromLink.url}</Link></p>
+        <p className="authorName"><b>{infoFromLink.article.writtenBy}</b></p>
         <p className="postname">{infoFromLink.article.name}</p>
         <div className="sharePost">
           <div className="likes">
@@ -73,7 +73,7 @@ function Info() {
         </div>
         <div className="writtenBysection">
           <div className="likeBox">
-            <img className="likeIcn" src="https://cdn-icons-png.flaticon.com/128/2636/2636668.png"/>
+            <img alt = "loading" className="likeIcn" src="https://cdn-icons-png.flaticon.com/128/2636/2636668.png"/>
             <p>11.9k</p>
           </div>
           <hr/>
@@ -86,7 +86,7 @@ function Info() {
               <div className="wrtnDtls">
                 WRITTEN BY:<br/>
                 John Doe<br/>
-                {infoFromLink.article.publishedAt}
+                2023-10Aug 2:12pm , Sunday
               </div>
             </div>
           </div>
@@ -94,32 +94,37 @@ function Info() {
         <h2 className="more">More From Siren</h2>
         <div className="moreFromSameCategory">
           <div className="firstDiv">
-              <img className="imgg" src={ newDataShow !== undefined ? newDataShow[2].urlToImage:dataShow[2].urlToImage} />
-              <h2>Joshua Tree<br/> Overnight</h2>
-              <p>To read more... <a href= { newDataShow !== undefined ? newDataShow[2].url:dataShow[2].url }>Click Here</a></p>
+              <img alt="loading" className="imgg" src={ newDataShow !== undefined ? newDataShow[2].imageUrl:dataShow[2].imageUrl} />
+              <p className="authorName">Joshu Tree <br/>Overnight</p>
+              <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[2].toKnowMoreUrl:dataShow[2].toKnowMoreUrl }>Click Here</a></p>
               <div className="oneMore">
-                <img style={{display:"flex",width:"4em"}} id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[2].author:dataShow[2].author }</p>
+                <p className="name">{newDataShow[2].name}</p>
+                <img id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[2].writtenBy:dataShow[2].author }</p>
                 <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[2].publishedAt:dataShow[2].publishedAt }</p>
               </div>
           </div>
+          <hr/>
           <div className="secondDiv">
-            <img src={ newDataShow !== undefined ? newDataShow[0].urlToImage:dataShow[0].urlToImage }/>
-            <h2>Joshua Tree<br/> Overnight</h2>
-            <p>To read more... <a href= { newDataShow !== undefined ? newDataShow[0].url:dataShow[0].url }>Click Here</a></p>
+            <img alt="loading" className="imgg" src={ newDataShow !== undefined ? newDataShow[0].imageUrl:dataShow[0].imageUrl }/>
+            <p className="authorName">Joshua Tree<br/> Overnight</p>
+            <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[0].toKnowMoreUrl:dataShow[0].toKnowMoreUrl }>Click Here</a></p>
             <div className="oneMore">
-                <img style={{display:"flex",width:"4em"}} id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[0].author:dataShow[0].author }</p>
+                <p className="name">{newDataShow[0].name}</p>
+                <img id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[0].writtenBy:dataShow[0].name }</p>
                 <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[0].publishedAt:dataShow[0].publishedAt }</p>
               </div>
           </div>
+          <hr/>
           <div className="thirdDiv">
-            <img src={ newDataShow !== undefined ? newDataShow[1].urlToImage:dataShow[1].urlToImage }/>
-            <h2>Joshua Tree<br/> Overnight</h2>
-            <p>To read more... <a href= { newDataShow !== undefined ? newDataShow[1].url:dataShow[1].url }>Click Here</a></p>
+            <img alt="loading" className="imgg" src={ newDataShow !== undefined ? newDataShow[1].imageUrl:dataShow[1].imageUrl }/>
+            <p className="authorName">Joshua Tree<br/> Overnight</p>
+            <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[1].toKnowMoreUrl:dataShow[1].toKnowMoreUrl }>Click Here</a></p>
             <div className="oneMore">
+                <p className="name">{newDataShow[1].name}</p>
                 <img style={{display:"flex",width:"4em"}} id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[1].author:dataShow[1].author}</p>
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[1].writtenBy:dataShow[1].name}</p>
                 <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[1].publishedAt:dataShow[1].publishedAt }</p>
               </div>
           </div>

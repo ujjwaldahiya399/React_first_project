@@ -6,8 +6,11 @@ import Articles from "./Components/Articles";
 import Info from "./Components/Info";
 import axios from "axios";
 import "./App.css";
+import myContext from "./Components/context";
 
 function App() {
+  const [jsonData,setJsonData] = useState([]);
+
   // const [data,setData] = useState();
   // const [load,setLoad] = useState(false);
   // useEffect(() => {
@@ -22,7 +25,14 @@ function App() {
   //     setLoad(true);
   //   })
   // },[]);
+  useEffect(() => {
+    axios.get("/db/data.json")
+      .then(res => setJsonData(res.data))
+      .catch(err => console.error(err));
+      // console.log(jsonData);
+  },[]);
   return (
+    <myContext.Provider value = {jsonData}>
     <div className="biggerDiv">
       <div className="theSiren">
         <span className="the">The</span>
@@ -38,6 +48,7 @@ function App() {
         <Route path="/Info/:id" element={<Info />}></Route>
       </Routes>
     </div>
+    </myContext.Provider>
   );
 }
 

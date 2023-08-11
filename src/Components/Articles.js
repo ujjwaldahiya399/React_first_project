@@ -7,65 +7,73 @@ import { useParams,Link } from "react-router-dom";
 import axios from "axios";
 import TopPosts from "./TopPosts";
 export default function Articles() {
-  const [data, setData] = useState();
+  const [jsondata, setJsonData] = useState();
   const [loaded, setLoaded] = useState(false);
-  const params = useParams();
-//   var titleString = params.category;
-//   titleString = titleString.toUpperCase();
   const [count, setCount] = useState(7);
-  console.log("Use Params returned:", params);
-//   Loadedindicatesifthedatahasbeenloadedornot;
-  const date = new Date();
-  // let  elementId = index > 4 ? 'my-element-id' : '';
-  const dateString =
-    date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
-  useEffect(() => {
-    var url = "https://blogdata.onrender.com/" + params.category;
-      // var url = "https://newsapi.org/v2/everything?q=" +
-      // params.category +
-      // "&from=" +  // put date string for latest articles
-      // "&sortBy=publishedAt&language=en&" +
-      // "apiKey=ad2f8f6ee02b4b5daa12032ed92fb380";
+  let params = useParams();
+  params = params.category.toLowerCase();
+  console.log(params);
 
-    // var req = new Request(url);
-    // fetch(req).then((response) => {
-    //   response.json().then((data) => {
-    //     setData(data);
-    //     setLoaded(true);
-    //     console.log(data);
-    //   });
-    // });
-    axios.get(url).then((res) => {
-      console.log(res.data);
-      setData(res.data);
+  console.log("Use Params returned:", params);
+  useEffect(() => {
+    axios.get("/db/data.json")
+    .then((res) => {
+      setJsonData(res.data);
       setLoaded(true);
     })
+    .catch(err => console.error(err));
   }, [params]);
   if (loaded) {
     return (
+      <>
       <div style={{display:"flex",justifyContent:"space-between",marginTop:"3em"}} className="mainContainer">
+      {console.log(jsondata[params])}
         <div className="articles-container">
-            {data.map((article,index) => {
+        <h2>{params.toUpperCase()}</h2>
+            {jsondata[params].map((article,index) => {
                 console.log(count,index);
                 if (index<count) {
                     return (
                       
-                        <div id= {index >= 4 ? "xxx":"noxxx"} className="article" key={index}>
+                        <div id= {index >= 7 ? "xxx":"noxxx"} className="article" key={index}>
                         {/* {console.log(index)} */}
-                            <img src={article.urlToImage}
+                            <img src={article.imageUrl}
                                 className="thumbnail"
                                 alt=" loading..."
                              />
                              <div className="text-container">
-                                <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/info/${article.title}`} state={{article:article,data:data}}><p className="title">{article.title}</p></Link>
+                                <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/info/${article.name}`} state={{article:article,data:jsondata[params]}}><p className="title">{article.name}</p></Link>
                                 {/* <p className="title">{article.title}</p> */}
-                                <p className="content">{article.content}</p>
-                                <p className="published">{article.publishedAt}</p>
+                                <p className="content">{article.details}</p>
+                                <p className="published">{article.writtenBy}</p>
                              </div>
                         </div>
                     )
                 }
             })}
+            {/* <button className="loadMoreBtn"
+                onClick={() => {
+                    setCount(count+7)
+                }}
+                >
+                Load More <img alt="loading" style={{display:"flex",width:"100%",height:"3em"}} className="dwnArrow" src="https://cdn-icons-png.flaticon.com/128/2989/2989995.png"/>
+            </button> */}
+        </div>
+        <div className="divForTopPosts">
+          <TopPosts/>
+        </div>
+        
+        {/* <button className="loadMoreBtn"
+                onClick={() => {
+                    setCount(count+7)
+                }}
+                >
+                Load More <img alt="loading" style={{display:"flex",width:"100%",height:"3em"}} className="dwnArrow" src="https://cdn-icons-png.flaticon.com/128/2989/2989995.png"/>
+            </button>
+        </div> */}
+        
+      </div>
+      <div style={{display:"flex",justifyContent:"center"}}>
             <button className="loadMoreBtn"
                 onClick={() => {
                     setCount(count+7)
@@ -73,13 +81,8 @@ export default function Articles() {
                 >
                 Load More <img alt="loading" style={{display:"flex",width:"100%",height:"3em"}} className="dwnArrow" src="https://cdn-icons-png.flaticon.com/128/2989/2989995.png"/>
             </button>
-        </div>
-        <div className="divForTopPosts">
-          <TopPosts/>
-        </div>
-        
-        
       </div>
+      </>
     ) 
     } else {
         return <div className="progressContainer"><CircularProgress /></div>

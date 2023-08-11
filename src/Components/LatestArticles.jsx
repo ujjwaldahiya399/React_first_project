@@ -1,57 +1,57 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Link } from "react-router-dom";
+import myContext from "./context";
 import "../App.css";
 function LatestArticles(props) {
     const [count, setCount] = useState(4);
-    console.log("Props", props.props);
-
-    const { data1, data2, data3, data5 } = props.props
+    const dataFromContext = useContext(myContext);
+    console.log(dataFromContext);
+    const data = props.latestArticleData
     // if (loaded) {
-        console.log(data1[11]);
-        console.log(data2);
+        console.log(data);
     return (
-        <div style={{marginLeft:"1.4em"}} className="latestArticleDiv">
+        <div className="latestArticleDiv">
             <div>
                 <h1 className="lines">Latest Articles</h1>
 
                 <div className="mainFirst">
-                    <img className="mmypic" src={data1[55].urlToImage} alt="lod.." />
+                    <img className="mmypic" src={data[0].imageUrl} alt="lod.." />
                     <div className="sistum">
-                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data1[55].title}`} state={{article:data1[55],data:[data1[11],data1[23],data1[39]]}}>
-                            <h4 className="heading">{data1[55].title} </h4>
+                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[0].name}`} state={{article:data[0],data:dataFromContext.fitness}}>
+                            <h4 className="heading">{data[0].name} </h4>
                         </Link>
-                        <p>{data1[55].content}</p>
-                        <p className='published'>{data1[55].publishedAt}</p>
+                        <p>{data[0].details}</p>
+                        <p className='published'>{data[0].writtenBy}</p>
                     </div>
                 </div>
                 <div className="mainFirst">
-                    <img className="mmypic" src={data3[55].urlToImage} alt="lod.." />
+                    <img className="mmypic" src={data[1].imageUrl} alt="lod.." />
                     <div className="sistum">
-                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data3[55].title}`} state={{article:data3[55],data:[data3[11],data3[23],data3[43]]}}>
-                            <h4 className="heading">{data3[55].title} </h4>
+                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[1].name}`} state={{article:data[1],data:dataFromContext.bollywood}}>
+                            <h4 className="heading">{data[1].name} </h4>
                         </Link>
-                        <p>{data3[55].content}</p>
-                        <p className='published'>{data3[55].publishedAt}</p>
+                        <p>{data[1].details}</p>
+                        <p className='published'>{data[1].writtenBy}</p>
                     </div>
                 </div>
                 <div className="mainFirst">
-                    <img className="mmypic" src={data5[55].urlToImage} alt="lod.." />
+                    <img className="mmypic" src={data[2].imageUrl} alt="lod.." />
                     <div className="sistum">
-                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data5[55].title}`} state={{article:data5[55],data:[data5[21],data5[11],data5[37]]}}>
-                            <h4 className="heading">{data5[55].title} </h4>
+                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[2].name}`} state={{article:data[2],data:dataFromContext.hollywood}}>
+                            <h4 className="heading">{data[2].name} </h4>
                         </Link>
-                        <p>{data5[55].content}</p>
-                        <p className='published'>{data5[55].publishedAt}</p>
+                        <p>{data[0].details}</p>
+                        <p className='published'>{data[2].writtenBy}</p>
                     </div>
                 </div>
                 <div className="mainFirst">
-                    <img className="mmypic" src={data2[55].urlToImage} alt="lod.." />
+                    <img className="mmypic" src={data[3].imageUrl} alt="lod.." />
                     <div className="sistum">
-                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data2[55].title}`} state={{article:data2[55],data:[data2[33],data2[11],data2[41]]}}>
-                            <h4 className="heading">{data2[55].title} </h4>
+                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[3].name}`} state={{article:data[3],data:dataFromContext.food}}>
+                            <h4 className="heading">{data[3].name} </h4>
                         </Link>
-                        <p>{data2[55].content}</p>
-                        <p className='published'>{data2[55].publishedAt}</p>
+                        <p>{data[3].details}</p>
+                        <p className='published'>{data[3].writtenBy}</p>
                     </div>
                 </div>
             </div>
@@ -64,9 +64,9 @@ function LatestArticles(props) {
                 Load More ⬇️
             </p>
             <div className="somenm" >
-                <img style={{width:"100%",height:"100%"}} src={data5[49].urlToImage} alt="alt" id="bigImg" />
+                <img src={data[4].imageUrl} alt="alt" id="bigImg" />
                 {/* <p className="baada">{data5[55].content}</p> */}
-                <p className='published'>{data5[66].publishedAt}</p>
+                <p className='published'>{data[4].writtenBy}</p>
             </div>
         </div>
     );

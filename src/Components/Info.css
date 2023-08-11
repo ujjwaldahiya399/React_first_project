@@ -31,6 +31,7 @@
     display: block;
     flex-direction: column;
     margin-top: 0.5em;
+    margin-left: 1em;
     justify-content: center;
     /* align-items: center; */
 }
@@ -132,6 +133,21 @@ hr{
     display: flex;
     width: 100%;
 }
+.authorName {
+    font-weight: bolder;
+    font-size: x-large;
+}
+.socialMediaAccs{
+    display: flex;
+    width: 28%;
+}
+#someImg {
+    display:"flex";
+    width:"4em"
+}
+hr{
+    display: none;
+}
 @media only screen and (max-width:500px) {
     .moreFromSameCategory {
         display: flex;
@@ -149,7 +165,7 @@ hr{
         margin-top: 2em;
     }
     .land{
-        width: 80vw;
+        width: 90vw;
         display: block;
     }
     .socialMediaAccs {
@@ -158,10 +174,80 @@ hr{
         margin-bottom: 2em;
     }
     .infoOfArticle{
-        height: 9vh;
+        height: 20vh;
         margin-left: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
     .more {
+        margin-top: 2em;
+    }
+    .infoHeader{
+        display: inline-flex;
+    }
+    .img{
+        width:80vw
+    }
+    .infoTitle{
+        width: 80vw;
+    }
+    .discrption{
+        width: 80vw;
+    }
+    .writtenBysection{
+        width: 90vw;
+    }
+    .moreFromSameCategory{
+        width: 80vw;
+    }
+    .firstDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    hr{
+        width: 90%;
+    }
+    .imgg {
+        width: 20%;
+        height: 13vh;
+    }
+    .secondDiv {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .authorName {
+        display: none;
+        font-weight: bold;
+        font-size: medium;
+    }
+    .readMore{
+        display: none;
+    }
+    #someImg{
+        display: none;
+        /* width: 2em;
+        height: 2em; */
+    }
+    .oneMore{
+        height: 18vh;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .thirdDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .someImg{
+        width: 2em;
+    }
+    .bckBtn{
         margin-top: 2em;
     }
 }
@@ -171,6 +257,58 @@ hr{
     }
     .infoTitle{
         width: 60vw;
+    }
+    .img {
+        width: 80%;
+    }
+    .infoTitle{
+        width: 80%;
+        font-size: xx-large;
+    }
+    .discrption {
+        width: 80%;
+        font-weight: 600;
+        font-size: x-large;
+    }
+    .postname {
+        display: none;
+    }
+    .more{
+        font-weight: bolder;
+        font-size: xx-large;
+    }
+    .moreFromSameCategory{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #someImg{
+        display: flex;
+        width: 2em;
+        height: 2em;
+    }
+    hr{
+        display: none;
+    }
+    .authorName{
+        display: none;
+    }
+    .oneMore{
+        display: flex;
+        flex-direction: column;
+    }
+    .infoOfArticle{
+        margin-left: 1em;
+    }
+    .socialMediaAccs{
+        display: flex;
+        width:30%
+    }
+    .sharePost{
+        position: sticky;
+        right: 0%;
     }
 
 }

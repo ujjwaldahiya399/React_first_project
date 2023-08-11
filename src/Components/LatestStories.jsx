@@ -1,21 +1,21 @@
-import React, { useEffect} from "react";
+import React, { useEffect,useContext} from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-
+import myContext from "./context";
 function LatestStories(props) {
   // const [data, setData] = useState();
   // const [loaded, setLoaded] = useState(false);
   const params = useParams();
   const nav = useNavigate();
-
+  const dataFromContext = useContext(myContext);
+  console.log(dataFromContext);
   // const [count, setCount] = useState(3);
 
 
   useEffect(() => {
   }, [params]);
 
-  console.log("Props", props.propsToLatestStories);
-  const { data1, data2} = props.propsToLatestStories;
-  console.log("Data1", data1);
+  const data = props.propsToLatestStories;
+  console.log(data);
   return (
     <div style={{marginLeft:"3.8em"}} className="DownSide">
       <hr className="shiro" />
@@ -23,31 +23,31 @@ function LatestStories(props) {
       <div className="gasli">
         <div className="kasama">
           <div className="side-box">
-            <Link style={{textDecoration:"none"}} to={`/Info/${data1[0].title}`} state={{article:data1[0],data:[data1[11],data1[21],data1[31]]}}>
-              <h3 style={{color:"black",fontWeight:"bold"}}  className="heading">{data1[0].title} </h3>
+            <Link style={{textDecoration:"none"}} to={`/Info/${data[0].name}`} state={{article:data[0],data:dataFromContext.bollywood}}>
+              <h3 style={{color:"black",fontWeight:"bold"}}  className="heading">{data[0].name} </h3>
             </Link>
-            <p className="cont">{data1[0].content}</p>
-            <p className='published'>{data1[0].publishedAt}</p>
+            <p className="cont">{data[0].details}</p>
+            <p className='published'>{data[0].writtenBy}</p>
             <br />
           </div>
         </div>
         <div className="kasama">
           <div className="side-box">
-            <Link style={{textDecoration:"none"}} to={`/Info/${data2[0].title}`} state={{article:data2[0],data:[data2[11],data2[21],data2[31]]}}>
-              <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data2[0].title} </h3>
+            <Link style={{textDecoration:"none"}} to={`/Info/${data[1].name}`} state={{article:data[1],data:dataFromContext.technology}}>
+              <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data[1].name} </h3>
             </Link>
-            <p className="cont">{data2[0].content}</p>
-            <p className='published'>{data2[0].publishedAt}</p>
+            <p className="cont">{data[1].details}</p>
+            <p className='published'>{data[1].writtenBy}</p>
             <br />
           </div>
         </div>
         <div className="kasama">
           <div className="side-box">
-            <Link style={{textDecoration:"none"}} to={`/Info/${data1[59].title}`} state={{article:data1[0],data:[data1[11],data1[21],data1[31]]}}>
-              <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data1[59].title} </h3>
+            <Link style={{textDecoration:"none"}} to={`/Info/${data[2].name}`} state={{article:data[2],data:dataFromContext.fitness}}>
+              <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data[2].name} </h3>
             </Link>
-            <p className="cont">{data1[59].content}</p>
-            <p className='published'>{data1[59].publishedAt}</p>
+            <p className="cont">{data[2].details}</p>
+            <p className='published'>{data[2].writtenBy}</p>
             <br />
           </div>
         </div>

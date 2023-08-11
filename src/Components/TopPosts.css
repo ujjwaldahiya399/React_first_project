@@ -4,6 +4,7 @@
 }
 .article2{
     width:35vw;
+    /* height: 50vh; */
     border-bottom: solid 1px grey;
     margin-bottom:3em;
     display: flex;

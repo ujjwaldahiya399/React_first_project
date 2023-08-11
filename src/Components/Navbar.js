@@ -66,8 +66,7 @@ function Navbar() {
             return isActive ? { color: "green" } : { color: "blue" };
           }}
         >
-          {" "}
-          Bollywood{" "}
+          Bollywood
         </NavLink>
         <NavLink
           to="/Technology"
