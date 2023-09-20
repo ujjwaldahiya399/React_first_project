@@ -476,11 +476,7 @@
 .mid-content{
     display: flex;
 }
-#sid-box2{
-    /* display: flex;
-    flex-direction: columns; */
-    /* align-items: center; */
-}
+
 .mg{
     position: relative;
     left: 0px;
@@ -551,9 +547,7 @@
     width: 100%;
     height: 100%;
 }
-.somenm{
 
-}
 @media only screen and (max-width:500px) {
     .Topper{
         display: flex;

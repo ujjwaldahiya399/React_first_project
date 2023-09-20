@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Articles.css";
-// import ".App.css";
-// import { LinearProgress } from "@muimaterial";
+
 import CircularProgress from '@mui/material/CircularProgress';
 import { useParams,Link } from "react-router-dom";
 import axios from "axios";
