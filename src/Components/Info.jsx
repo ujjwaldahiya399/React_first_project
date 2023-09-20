@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import './Info.css';
-import axios from "axios";
 import { useLocation, useNavigate,Link } from "react-router-dom";
 function Info() {
   // let [data,setData] = useState();
-  const [loaded, setLoaded] = useState(false);
   let infoFromLink = useLocation().state;
   console.log(infoFromLink);
   // let params = useLocation().state.paramsFromLink
@@ -35,10 +33,10 @@ function Info() {
       // })
   return (
     <div className="mainContainer">
-    <div className="top">
+    {/* <div className="top">
         <p className="theSirenTxt"><span>The</span><span>Siren</span></p>
         <p>Get Started</p>
-    </div>
+    </div> */}
       <div className="infoAboutArticle">
         <div className="land">
           <div className="infoHeader">
@@ -99,9 +97,12 @@ function Info() {
               <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[2].toKnowMoreUrl:dataShow[2].toKnowMoreUrl }>Click Here</a></p>
               <div className="oneMore">
                 <p className="name">{newDataShow[2].name}</p>
+                <div className="forProfilePngAndAuthor">
                 <img id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
                 <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[2].writtenBy:dataShow[2].author }</p>
                 <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[2].publishedAt:dataShow[2].publishedAt }</p>
+                </div>
+
               </div>
           </div>
           <hr/>
@@ -111,9 +112,11 @@ function Info() {
             <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[0].toKnowMoreUrl:dataShow[0].toKnowMoreUrl }>Click Here</a></p>
             <div className="oneMore">
                 <p className="name">{newDataShow[0].name}</p>
+                <div className="forProfilePngAndAuthor">
                 <img id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[0].writtenBy:dataShow[0].name }</p>
-                <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[0].publishedAt:dataShow[0].publishedAt }</p>
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[2].writtenBy:dataShow[2].author }</p>
+                <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[2].publishedAt:dataShow[2].publishedAt }</p>
+                </div>
               </div>
           </div>
           <hr/>
@@ -123,9 +126,11 @@ function Info() {
             <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[1].toKnowMoreUrl:dataShow[1].toKnowMoreUrl }>Click Here</a></p>
             <div className="oneMore">
                 <p className="name">{newDataShow[1].name}</p>
-                <img style={{display:"flex",width:"4em"}} id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
-                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[1].writtenBy:dataShow[1].name}</p>
-                <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[1].publishedAt:dataShow[1].publishedAt }</p>
+                <div className="forProfilePngAndAuthor">
+                <img id="someImg" className="profilePng" src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="img is loading" />
+                <p style={{marginLeft:"1em"}}>{ newDataShow !== undefined ? newDataShow[2].writtenBy:dataShow[2].author }</p>
+                <p style={{marginLeft:"1em"}} >{ newDataShow !== undefined ? newDataShow[2].publishedAt:dataShow[2].publishedAt }</p>
+                </div>
               </div>
           </div>
         </div>

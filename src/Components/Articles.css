@@ -10,10 +10,10 @@
     display: flex;
 }
 .thumbnail {
-    min-width: 50%;
-    min-height: 15%;
-    max-width: 50%;
-    max-height: 15%;
+    min-width: 55%;
+    min-height: 35%;
+    max-width: 55%;
+    max-height: 35%;
 }
 .articles-container{
     width:40vw;
@@ -56,7 +56,7 @@
     .mainContainer{
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        width: 95%;
     }    
     .image2{
         min-width: 100%;
@@ -70,6 +70,9 @@
     }
     .article{
         width: 90%;
+        margin-right: 0px;
+        gap: 0px;
+        padding: 0px;
         
     }
     .thumbnail{
@@ -82,8 +85,9 @@
         width: 80%;
     }
     .divForTopPosts{
-        width: 100vw;
+        width: 95%;
         display: flex;
+        margin-right: 0px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -94,16 +98,34 @@
     #xxx {
         width: 90vw;
     }
+    .articles-container{
+        width:75%;
+        margin-left: 0px;
+    }
+    .divForTopPosts{
+        margin-right: 0px;
+    }
     #noxxx{
         margin: 0px;
+        gap: 0px;
+        align-items: center;
+        width:90%
         
     }
-    .thumbnail{
-        min-height: 20%;
-        max-height: 30%;
-        width: 40%;
+    .text-container {
+        margin-left: 10px;
+        width: 50%;
     }
-    .articles-container{
-        width:45vw
+    .advertize {
+        height: 35em;
+    }
+    .thumbnail{
+        /* min-height: 20%;
+        display:flex
+        max-height: 30%;
+        width: 40%; */
+        display: flex;
+        height: 22vh;
+        width: 45%;
     }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 // import React from "react";
 // import { Routes, Route, Link } from "react-router-dom";
 // import './Navbar.css'
@@ -41,14 +42,27 @@
 // }
 
 // export default Navbar;
-import React from 'react'
+import React ,{useState} from 'react'
 import { NavLink } from 'react-router-dom';
 import "../App.css";
+import Hamburger from './Hamburger';
+
 function Navbar() {
+  const [toggleBurger,setToggleBurger] = useState(false); 
+  console.log(toggleBurger);
+  const toggleHamburger = () => {
+    console.log('toggleHamburger');
+    setToggleBurger(!toggleBurger);
+    console.log(toggleBurger);
+  }
   return (
     <>
-      <header className="Navbar">
+      <div onClick={toggleHamburger} className='hamburger'>
+          <Hamburger />
+      </div>
+      <div className="nav-list Navbar">
         <NavLink
+          className={toggleBurger ? "xyz" : "abc"}
           to="/"
           id="myLinks"
           style={({ isActive }) => {
@@ -60,6 +74,7 @@ function Navbar() {
           Home
         </NavLink>
         <NavLink
+          className={toggleBurger ? "xyz" : "abc"}
           to="/Bollywood"
           id="myLinks"
           style={({ isActive }) => {
@@ -69,6 +84,7 @@ function Navbar() {
           Bollywood
         </NavLink>
         <NavLink
+          className={toggleBurger ? "xyz" : "abc"}
           to="/Technology"
           id="myLinks"
           style={({ isActive }) => {
@@ -78,6 +94,7 @@ function Navbar() {
           Technology
         </NavLink>
         <NavLink
+          className={toggleBurger ? "xyz" : "abc"}
           to="/Hollywood"
           id="myLinks"
           style={({ isActive }) => {
@@ -87,6 +104,7 @@ function Navbar() {
           Hollywood
         </NavLink>
         <NavLink
+          className={toggleBurger ? "xyz" : "abc"}
           to="/Fitness"
           id="myLinks"
           style={({ isActive }) => {
@@ -96,6 +114,7 @@ function Navbar() {
           Fitness
         </NavLink>
         <NavLink
+          className={toggleBurger ? "xyz" : "abc"}
           to="/Food"
           id="myLinks"
           style={({ isActive }) => {
@@ -104,8 +123,18 @@ function Navbar() {
         >
           Food
         </NavLink>
-      </header>
+      </div>
       <hr id='NavHr' />
+      <style jsx={true}>
+        {`
+           NavLink {
+            display: ${toggleBurger ? 'inline' : 'none'};
+            height:100vh;
+            width:50vw;
+            background-color:red
+          }
+       `}
+      </style>
     </>
   )
 }

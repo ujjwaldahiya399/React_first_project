@@ -19,3 +19,78 @@
     width: 90vw;
     color: rgb(228, 219, 219) 
   }
+#navBoxMob{
+    display: none;
+}
+.mobile-nav{
+  display: none;
+}
+.someName {
+  display: none;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.Navbar__Link{
+  display: none;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .mobile-nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: block; /* Show the navigation in mobile view */
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+  }
+  .nav-toggle-label span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .nav-list {
+    display: none; /* Hide the menu by default */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+  }
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
+
+  .nav-toggle:checked ~ .nav-list {
+    display: block; /* Show the menu when the toggle is checked */
+  }
+}

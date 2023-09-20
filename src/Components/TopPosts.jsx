@@ -76,7 +76,7 @@ function TopPosts({ props }) {
                                     <Link style={{textDecoration:"none",color:"black"}} to={`/Info/${article.name}`} state={ {article:article,data:newDataa} } className='anchor2'>
                                         <p className='title'>{article.name}</p>
                                     </Link>
-                                    <p className='content'>{article.details}</p>
+                                    <p id='someContent' className='content'>{article.details}</p>
                                     <p className='published'>{article.publishedAt}</p>
                                 </div>
                             </div>

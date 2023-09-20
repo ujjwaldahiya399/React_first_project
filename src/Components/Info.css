@@ -64,9 +64,9 @@
     flex-wrap: wrap;
 }
 .sharePost{
-    position: fixed;
-    left: 11%;
-    top:36%
+    position: sticky;
+    left: 0%;
+    bottom:100%
 }
 .likeIcn,.shareIcon{
     display: flex;
@@ -145,16 +145,28 @@ hr{
     display:"flex";
     width:"4em"
 }
-hr{
+/* hr{
     display: none;
-}
+} */
 @media only screen and (max-width:500px) {
     .moreFromSameCategory {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-    }    
+    }
+    .profilePng {
+        width:30%;
+        height: 25%;
+        margin-left: 2em;
+    }
+    .sharePost {
+        display: none;
+    }
+    .writterDetails {
+        display: flex;
+        justify-content: center;
+    }
     .secondDiv{
         margin-top: 2em;
     }
@@ -166,11 +178,11 @@ hr{
     }
     .land{
         width: 90vw;
-        display: block;
+        display: flex;
     }
     .socialMediaAccs {
         width: 50%;
-        margin-left: 7em;
+        margin-left: 4em;
         margin-bottom: 2em;
     }
     .infoOfArticle{
@@ -191,13 +203,20 @@ hr{
     }
     .infoTitle{
         width: 80vw;
+        text-align: center;
     }
     .discrption{
         width: 80vw;
     }
+    .likeBox {
+        width: 90vw;
+        justify-content: center;
+    }
+    
     .writtenBysection{
         width: 90vw;
     }
+    .writterDetails
     .moreFromSameCategory{
         width: 80vw;
     }
@@ -210,8 +229,8 @@ hr{
         width: 90%;
     }
     .imgg {
-        width: 20%;
-        height: 13vh;
+        width: 13%;
+        height: 11vh;
     }
     .secondDiv {
         width: 100%;
@@ -227,9 +246,9 @@ hr{
         display: none;
     }
     #someImg{
-        display: none;
-        /* width: 2em;
-        height: 2em; */
+        display: inline-block;
+        width: 1.5em;
+        height: 2.5em;
     }
     .oneMore{
         height: 18vh;
@@ -248,7 +267,10 @@ hr{
         width: 2em;
     }
     .bckBtn{
-        margin-top: 2em;
+        margin-top: 5em;
+    }
+    .postname {
+        text-align: center;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

@@ -251,7 +251,7 @@
 }
 #SweetHome{
     height: 100vh;
-    width: 100vw;
+    width: 98vw;
 }
 .computer
 {
@@ -363,8 +363,8 @@
 .both
 {
     display: flex;
-    width: 100vw;
-    margin-left: 4em;
+    width: 100%;
+    margin-left: 0em;
     margin-top: 2em;
     gap: 50px;
     justify-content: space-around;
@@ -460,7 +460,8 @@
     padding: 0px 12px;
 }
 .UpSide{
-    padding: 3px 26px;
+    padding: 1px 26px;
+    width: 95%;
 }
 .gasli{
     justify-content: center;
@@ -558,6 +559,11 @@
         display: flex;
         flex-direction: column;
     }
+    hr {
+        width: 90vw;
+        color: black;
+        background-color: black;
+    }
     
     .divToCheck{
         background-color: green;
@@ -641,7 +647,7 @@
     }
     .mmypic{
         display: flex;
-        height:29vw
+        min-height:29vw
     }
     .hum {
         display: flex;
@@ -649,6 +655,10 @@
         width: 90vw;
         justify-content: center;
         align-items: center;
+        margin-right: 0px;
+    }
+    .forProfilePngAndAuthor {
+        display: flex;
     }
     .newDiv{
         margin-left: 2em;
@@ -659,6 +669,9 @@
     }
     #bigImg{
         width: 100%;
+    }
+    .reimage {
+        min-width: 100%;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -706,4 +719,5 @@
     display: flex;
     flex-direction: column;
    }
+   
 }
