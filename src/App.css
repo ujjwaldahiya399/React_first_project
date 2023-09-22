@@ -349,6 +349,7 @@ header li{
     align-items: center;
     margin-top: 2em;
   }
+  
   .xyz{
     display: block;
   }
@@ -370,7 +371,7 @@ header li{
     flex-direction: column;
   }
   .biggerDiv{
-    width: 95%;
+    width: 90vw;
   }
 
   .container
@@ -451,6 +452,15 @@ header li{
   .somenm {
     width: 63%;
     height: 142vh;
+  }
+  .biggerDiv {
+    width: 90vw;
+  }
+  #SweetHome{
+    width: 98%;
+  }
+  .Navbar{
+    width: 92%;
   }
   
 

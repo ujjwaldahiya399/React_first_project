@@ -183,7 +183,7 @@ function Home() {
             </div>
           </div>
 
-          <div>
+          <div className="latestStoriesDiv">
             <LatestStories propsToLatestStories={data.latestStories} />
           </div>
         </div>

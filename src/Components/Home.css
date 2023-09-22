@@ -448,7 +448,7 @@
     width: 85%;
 }
 .shiro{
-    
+    display: none;
     background-color: rgb(241, 233, 233);
     width: 100%;
 }
@@ -560,9 +560,18 @@
 }
 
 @media only screen and (max-width:500px) {
+    .SweetHome{
+        width: 93vw;
+    }
     .Topper{
         display: flex;
         flex-direction: column;
+    }
+    .rightSide{
+        width: 90%;
+    }
+    .someName {
+        width: 89%;
     }
     hr {
         width: 90vw;
@@ -583,7 +592,7 @@
         height: 1vh;
     }
     .Set {
-        width: 100%;
+        width: 90%;
         /* margin-top: 2em; */
         height: 40vhvh;
     }
@@ -593,18 +602,23 @@
     #TopLeft,#TopRight {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 95%;
         height: 38vh;
         align-items: center;
     }
     .topImg,.sideTopImg,.sideImg{
-        width: 90vw;
+        width: 95%;
     }
     .UpSide{
-        margin-top:25em
+        margin-top:25em;
+        width: 80%
+    }
+    .latestStoriesDiv{
+        width: 90%;
     }
     .gasli{
         display: flex;
+        width: 90%;
         flex-direction: column;
     }
     .Top-let{
@@ -615,7 +629,7 @@
     }
     .sid-box{
         display: flex;
-        width: 90vw;
+        width: 90%;
         margin-top: 2em;
         flex-direction: column;
         justify-content: center;
@@ -631,15 +645,20 @@
         
         /* margin-right: 20px; */
     }
+    .kasama{
+        border-top: 2px solid grey;
+        border-right: none;
+    }
     .both{
         display: flex;
+        width: 90%;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         margin-left: 1em;
     }
     .divForLatestArticle{
-        width:90vw;
+        width:89%;
         justify-content: center;
         align-items: center;
         margin-left: 0px;
@@ -657,8 +676,9 @@
     .hum {
         display: flex;
         flex-direction: column;
-        width: 90vw;
+        width: 85vw;
         justify-content: center;
+        overflow: hidden;
         align-items: center;
         margin-right: 0px;
     }
@@ -666,7 +686,7 @@
         display: flex;
     }
     .newDiv{
-        margin-left: 2em;
+        margin-left: 1em;
     }
     .mainfake1{
         display: flex;
@@ -682,20 +702,55 @@
     .counts {
         display: none;
     }
+    .mainfake {
+        width: 95%;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .SweetHome {
-    width: 95vw;
+    width: 95%;
+  }
+  .Topper {
+    padding: 0px;
+    width: 90%;
+  }
+  #TopLeft {
+    margin-top: 7em;
+    height: 97%;
+  }
+  .topImg {
+    height: 85%;
+  }
+  .Set{
+    height: 86%;
+  }
+  .UpSide{
+    padding: 0px;
+  }
+  .newDiv {
+    width: 77%;
+  }
+  .line {
+    margin-left: 0px;
   }
   .reimage1{
     min-width: 99%;
     max-width: 43%;
   }
+  .DownSide {
+    margin-left: 0px;
+    width: 87%;
+    border: none;
+    padding: 0px;
+  }
+  .reimage{
+    width: 240px;
+  }
   .counts{
     display: none;
   }
   .mainFirst{
-    width: 55vw;
+    width: 95%;
   }
   .computer {
     position: relative;
@@ -723,15 +778,18 @@
    }
    .both{
     margin-left: 1em;
+    width: 93%;
    }
    .rightSide{
-    width: 90%;
+    width: 78%;
    }
    #bigImg{
     display: flex;
-    width: 54vw;
+    width: 46vw;
+    height: 53vh;
    }
    .mainfake1{
+    width: 95%;
     display: flex;
     flex-direction: column;
    }

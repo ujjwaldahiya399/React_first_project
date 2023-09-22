@@ -1,6 +1,8 @@
 import React, { useEffect,useContext} from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import myContext from "./context";
+import "./Home.css"
+
 function LatestStories(props) {
   // const [data, setData] = useState();
   // const [loaded, setLoaded] = useState(false);
@@ -17,7 +19,7 @@ function LatestStories(props) {
   const data = props.propsToLatestStories;
   console.log(data);
   return (
-    <div style={{marginLeft:"3.8em"}} className="DownSide">
+    <div className="DownSide">
       <hr className="shiro" />
       <h1>Latest Stories</h1>
       <div className="gasli">
