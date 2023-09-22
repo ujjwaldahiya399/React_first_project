@@ -11,7 +11,7 @@ function Top2(props) {
     return (
         <div  className="rightSide">
             <div style={{width:"100%"}} className="someName">
-                <h1 className="line">Top Post</h1>
+                <h1 className="line">Top Posts</h1>
                 <div className="mainfake">
                     <img
                         src={data[0].imageUrl}
@@ -22,7 +22,11 @@ function Top2(props) {
                         <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[0].name}`} state={{article:data[0],data:dataFromContext.bollywood}}>
                             <h4 className="">{data[0].name} </h4>
                         </Link>
-                        <p className="">{data[0].details}</p>
+                        <div className="detailsAndCount">
+                            <p className="">{data[0].details}</p>
+                            <h1 className="counts" style={{textAlign:"right", fontSize:"60px"}}>1</h1> 
+                        </div>
+                       
                         <p className='published'>{data[0].writtenBy}</p>
                     </div>
                 </div>
@@ -33,11 +37,16 @@ function Top2(props) {
                 <div className="mainfake mainfake1">
                     <img className="reimage reimage1" src={data[1].imageUrl} alt="loding...." />
                     <div className="recontant">
-                        <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[1].name}`} state={{article:data[1],data:dataFromContext.technology}}>
+                            <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[1].name}`} state={{article:data[1],data:dataFromContext.technology}}>
                             <h5 className="">{data[1].name} </h5>
-                        </Link>
+                            </Link>
                         {/* <p>{data1[88].content}</p> */}
-                        <p>{data[1].writtenBy}</p>
+                        <div className="someClas">
+                            <p>{data[1].writtenBy}</p>
+                            <h1 className="counts" style={{textAlign:"right", fontSize:"60px"}}>2</h1> 
+                        </div>
+
+
                         <br />
                     </div>
                     
@@ -49,6 +58,10 @@ function Top2(props) {
                         <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}}  to={`/Info/${data[2].name}`} state={{article:data[2],data:dataFromContext.fitness}}>
                             <h5 className="">{data[2].name} </h5>
                         </Link>
+                        <div className="someClas">
+                            <p className="writterName" >{data[1].writtenBy}</p>
+                            <h1 className="counts" style={{textAlign:"right", fontSize:"60px"}}>3</h1> 
+                        </div>
                         {/* <p>{data3[64].content}</p> */}
                         <br />
                     </div>
@@ -60,6 +73,10 @@ function Top2(props) {
                         <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data[3].name}`} state={{article:data[3],data:data.hollywood}}>
                             <h5 className="">{data[3].name} </h5>
                         </Link>
+                        <div className="someClas">
+                            <p className="writterName" >{data[1].writtenBy}</p>
+                            <h1 className="counts" style={{textAlign:"right", fontSize:"60px"}}>4</h1> 
+                        </div>
                         {/* <p>{data2[91].content}</p> */}
                         <br />
                     </div>
