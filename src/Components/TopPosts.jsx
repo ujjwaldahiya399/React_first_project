@@ -1,14 +1,15 @@
-import React, { useEffect, useState ,useContext} from 'react'
+import React, { useState ,useContext} from 'react'
 import { Link, useParams } from 'react-router-dom';
 // import DownArrow from "./downArrow.svg";
 import axios from 'axios';
 import './TopPosts.css';
 import myContext from './context';
-function TopPosts({ props }) {
+function TopPosts(props) {
     // const focus = [50, 51, 52, 53];
+    console.log(props.completeData);
     const dataFromContext = useContext(myContext)
     console.log(dataFromContext);
-    let data = dataFromContext ? dataFromContext:[];
+    let data = props.completeData ? props.completeData:[];
     // let newData = data[params]
     // const [data, setData] = useState();
     const [newData,setNewData] = useState();

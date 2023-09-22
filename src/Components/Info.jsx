@@ -89,10 +89,11 @@ function Info() {
             </div>
           </div>
         </div>
-        <h2 className="more">More From Siren</h2>
+        <div className="moreFromSirenDiv">
+                  <h2 className="more">More From Siren</h2>
         <div className="moreFromSameCategory">
           <div className="firstDiv">
-              <img alt="loading" className="imgg" src={ newDataShow !== undefined ? newDataShow[2].imageUrl:dataShow[2].imageUrl} />
+              <img alt="loading" className="imgg spimgg" src={ newDataShow !== undefined ? newDataShow[2].imageUrl:dataShow[2].imageUrl} />
               <p className="authorName">Joshu Tree <br/>Overnight</p>
               <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[2].toKnowMoreUrl:dataShow[2].toKnowMoreUrl }>Click Here</a></p>
               <div className="oneMore">
@@ -105,9 +106,9 @@ function Info() {
 
               </div>
           </div>
-          <hr/>
+          <hr className="moreFromSireHr"/>
           <div className="secondDiv">
-            <img alt="loading" className="imgg" src={ newDataShow !== undefined ? newDataShow[0].imageUrl:dataShow[0].imageUrl }/>
+            <img alt="loading" className="imgg spimgg" src={ newDataShow !== undefined ? newDataShow[0].imageUrl:dataShow[0].imageUrl }/>
             <p className="authorName">Joshua Tree<br/> Overnight</p>
             <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[0].toKnowMoreUrl:dataShow[0].toKnowMoreUrl }>Click Here</a></p>
             <div className="oneMore">
@@ -119,9 +120,9 @@ function Info() {
                 </div>
               </div>
           </div>
-          <hr/>
+          <hr className="moreFromSireHr"/>
           <div className="thirdDiv">
-            <img alt="loading" className="imgg" src={ newDataShow !== undefined ? newDataShow[1].imageUrl:dataShow[1].imageUrl }/>
+            <img alt="loading" className="imgg spimgg" src={ newDataShow !== undefined ? newDataShow[1].imageUrl:dataShow[1].imageUrl }/>
             <p className="authorName">Joshua Tree<br/> Overnight</p>
             <p className="readMore">To read more... <a href= { newDataShow !== undefined ? newDataShow[1].toKnowMoreUrl:dataShow[1].toKnowMoreUrl }>Click Here</a></p>
             <div className="oneMore">
@@ -134,6 +135,8 @@ function Info() {
               </div>
           </div>
         </div>
+        </div>
+
         <div className="bckBtn">
           <button
             onClick={() => {

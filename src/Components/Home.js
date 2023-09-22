@@ -9,7 +9,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 // import "./Media.css";
 // import Info from "./Info";
-// import Navbar from "./Navbar";
+import Navbar from "./Navbar";
 // import "./App.css";
 
 function Home() {
@@ -87,13 +87,14 @@ function Home() {
       setLoaded(true);
     })
     .catch(err => console.error(err));
-  }, [params]);
+  }, []);
 
   if (loaded) {
     return (
       <>
+      <myContext.Provider value={data}>
       {console.log(data)}
-        {/* <Navbar /> */}
+        <Navbar />
         <div id="SweetHome">
           <div className="Topper">
             <section className="Topver">
@@ -186,6 +187,7 @@ function Home() {
             <LatestStories propsToLatestStories={data.latestStories} />
           </div>
         </div>
+        </myContext.Provider>
       </>
     );
   } else {
@@ -195,6 +197,7 @@ function Home() {
       </div>
     );
   }
+  
 }
 
 export default Home;

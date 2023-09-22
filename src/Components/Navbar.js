@@ -42,13 +42,19 @@
 // }
 
 // export default Navbar;
-import React ,{useState} from 'react'
+import React ,{useState,useContext} from 'react'
 import { NavLink } from 'react-router-dom';
 import "../App.css";
 import Hamburger from './Hamburger';
+import myContext from "./context";
+ 
 
-function Navbar() {
+function Navbar(props) {
   const [toggleBurger,setToggleBurger] = useState(false); 
+  const data = useContext(myContext);
+  console.log(data);
+  console.log(props.extraData)
+  const newData = props.extraData;
   console.log(toggleBurger);
   const toggleHamburger = () => {
     console.log('toggleHamburger');
@@ -62,6 +68,7 @@ function Navbar() {
       </div>
       <div className="nav-list Navbar">
         <NavLink
+          state={{}}
           className={toggleBurger ? "xyz" : "abc"}
           to="/"
           id="myLinks"
@@ -74,6 +81,7 @@ function Navbar() {
           Home
         </NavLink>
         <NavLink
+          state={{someData:data ? data : newData}}
           className={toggleBurger ? "xyz" : "abc"}
           to="/Bollywood"
           id="myLinks"
@@ -84,6 +92,7 @@ function Navbar() {
           Bollywood
         </NavLink>
         <NavLink
+          state={{someData:data ? data : newData}}
           className={toggleBurger ? "xyz" : "abc"}
           to="/Technology"
           id="myLinks"
@@ -94,6 +103,7 @@ function Navbar() {
           Technology
         </NavLink>
         <NavLink
+          state={{someData:data ? data : newData}}
           className={toggleBurger ? "xyz" : "abc"}
           to="/Hollywood"
           id="myLinks"
@@ -104,6 +114,7 @@ function Navbar() {
           Hollywood
         </NavLink>
         <NavLink
+          state={{someData:data ? data : newData}}
           className={toggleBurger ? "xyz" : "abc"}
           to="/Fitness"
           id="myLinks"
@@ -114,6 +125,7 @@ function Navbar() {
           Fitness
         </NavLink>
         <NavLink
+          state={{someData:data ? data : newData}}
           className={toggleBurger ? "xyz" : "abc"}
           to="/Food"
           id="myLinks"

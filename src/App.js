@@ -25,30 +25,28 @@ function App() {
   //     setLoad(true);
   //   })
   // },[]);
-  useEffect(() => {
-    axios.get("/db/data.json")
-      .then(res => setJsonData(res.data))
-      .catch(err => console.error(err));
-      // console.log(jsonData);
-  },[]);
+  // useEffect(() => {
+  //   console.log("inside useEffect of app.js")
+  //   axios.get("/db/data.json")
+  //     .then(res => setJsonData(res.data))
+  //     .catch(err => console.error(err));
+  //     console.log(jsonData);
+  // },[]);
   return (
-    <myContext.Provider value = {jsonData}>
     <div className="biggerDiv">
       <div className="theSiren">
         <span className="the">The</span>
         <span className="siren">Siren</span>
       </div>
-      <div className="divForNavBar">
-        <Navbar />
+      <div>
+        {/* <Home/> */}
       </div>
-      {/* <Home/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:category" element={<Articles />}></Route>
         <Route path="/Info/:id" element={<Info />}></Route>
       </Routes>
     </div>
-    </myContext.Provider>
   );
 }
 

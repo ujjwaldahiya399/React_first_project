@@ -7,6 +7,9 @@
     display: flex;
     justify-content: space-around;
 }
+.moreFromSireHr {
+    display: none;
+}
 .infoAboutArticle{
     display: flex;
     flex-direction: column;
@@ -14,6 +17,9 @@
     justify-content: center;
     align-items: center;
 
+}
+.moreFromSirenDiv {
+    justify-content: center;
 }
 .land{
     display: flex;
@@ -49,7 +55,7 @@
 
 .img {
     display: flex;
-    width: 50vw;
+    width: 40vw;
     justify-content: flex-start;
     margin-top: 2em;
 }
@@ -119,9 +125,11 @@ hr{
 .oneMore{
     display: flex;
 }
-.imgg{
+.spimgg{
     display: flex;
     width: 100%;
+    min-height: 32%;
+    max-height: 32%;
 }
 .backBtn{
     display: flex;
@@ -142,8 +150,11 @@ hr{
     width: 28%;
 }
 #someImg {
-    display:"flex";
-    width:"4em"
+    min-width: 2em;
+    max-width: 4em;
+}
+.more {
+    text-align: ce;
 }
 /* hr{
     display: none;

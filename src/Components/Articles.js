@@ -1,35 +1,40 @@
 import React, { useEffect, useState } from "react";
 import "./Articles.css";
-
+import Navbar from "./Navbar";
 import CircularProgress from '@mui/material/CircularProgress';
-import { useParams,Link } from "react-router-dom";
+import { useParams,Link,useLocation } from "react-router-dom";
 import axios from "axios";
 import TopPosts from "./TopPosts";
 export default function Articles() {
-  const [jsondata, setJsonData] = useState();
+  // const [extractedDataFromLink, setextractedDataFromLink] = useState();
   const [loaded, setLoaded] = useState(false);
   const [count, setCount] = useState(7);
   let params = useParams();
   params = params.category.toLowerCase();
   console.log(params);
-
+  const extractedDataFromLink = useLocation().state.someData;
+  console.log(extractedDataFromLink);
   console.log("Use Params returned:", params);
   useEffect(() => {
-    axios.get("/db/data.json")
-    .then((res) => {
-      setJsonData(res.data);
-      setLoaded(true);
-    })
-    .catch(err => console.error(err));
-  }, [params]);
+    // axios.get("/db/data.json")
+    // .then((res) => {
+    //   // setextractedDataFromLink(res.data);
+    //   setLoaded(true);
+    //   console.log(extractedDataFromLink);
+    // })
+    // .catch(err => console.error(err));
+    setLoaded(true);
+
+  }, []);
   if (loaded) {
     return (
       <>
+      <Navbar extraData = {extractedDataFromLink}/>
       <div style={{display:"flex",justifyContent:"space-between",marginTop:"3em"}} className="mainContainer">
-      {console.log(jsondata[params])}
+      {console.log(extractedDataFromLink[params])}
         <div className="articles-container">
         <h2>{params.toUpperCase()}</h2>
-            {jsondata[params].map((article,index) => {
+            {extractedDataFromLink[params].map((article,index) => {
                 console.log(count,index);
                 if (index<count) {
                     return (
@@ -41,7 +46,7 @@ export default function Articles() {
                                 alt=" loading..."
                              />
                              <div className="text-container">
-                                <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/info/${article.name}`} state={{article:article,data:jsondata[params]}}><p className="title">{article.name}</p></Link>
+                                <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/info/${article.name}`} state={{article:article,data:extractedDataFromLink[params]}}><p className="title">{article.name}</p></Link>
                                 {/* <p className="title">{article.title}</p> */}
                                 <p className="content">{article.details}</p>
                                 <p className="published">{article.writtenBy}</p>
@@ -59,7 +64,7 @@ export default function Articles() {
             </button> */}
         </div>
         <div className="divForTopPosts">
-          <TopPosts/>
+          <TopPosts completeData = {extractedDataFromLink}/>
         </div>
         
         {/* <button className="loadMoreBtn"
