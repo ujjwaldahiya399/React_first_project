@@ -118,7 +118,7 @@ function Home() {
                     src={data.technology[2].imageUrl}
                     alt="load"
                   />
-                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data.technology[2].name}`} state={{article:data.technology[2],data:data.technology}} className="computer">
+                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold",visibility:"hidden"}} to={`/Info/${data.technology[2].name}`} state={{article:data.technology[2],data:data.technology}} className="computer">
                     <h5 className="topRight">{data.technology[2].name} </h5>
                   </Link>
                 </div>
@@ -128,7 +128,7 @@ function Home() {
                     src={data.bollywood[1].imageUrl}
                     alt="load"
                   />
-                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold"}} to={`/Info/${data.bollywood[1].name}`} state={{article:data.bollywood[1],data:data.bollywood}} className="computer">
+                  <Link style={{textDecoration:"none",color:"black",fontWeight:"bold",visibility:"hidden"}} to={`/Info/${data.bollywood[1].name}`} state={{article:data.bollywood[1],data:data.bollywood}} className="computer">
                     <h5 className="bottomright">{data.bollywood[1].name} </h5>
                   </Link>
                 </div>

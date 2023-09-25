@@ -253,7 +253,7 @@
     height: 100vh;
     width: 98vw;
 }
-.computer
+.
 {
     text-decoration: none;
     /* position: relative;
@@ -322,9 +322,14 @@
     width: 100%;
 }
 .letfull{
+    visibility: hidden;
     position: relative;
     bottom: 200px;
     text-align: center;
+}
+.latestStoryText{
+    width: 20vw ;
+    border-bottom: 3px solid red;
 }
 .topRight{
     position: relative;
@@ -352,6 +357,7 @@
 }
 .lM{
     cursor: pointer;
+    visibility: hidden;
 }
 .mainFirst{
     width: 90%;
@@ -435,9 +441,15 @@
 .gasli{
     width: 100%;
     display: flex;
+    padding-top: 2em;
+    padding-bottom: 2em;
     flex-direction: row;
     justify-content: space-evenly;
+    border-top: 4px solid #F2EFEB;
+    border-bottom: 4px solid #F2EFEB;
 }
+
+
 .kasama{
     border-right: 4px solid rgb(242, 239, 235);
 }
@@ -490,7 +502,8 @@
 
 #bigImg{
     display: block;
-    height: 224%;
+    min-height: 209%;
+    max-height: 211%;
     width: 115%;
         /* width: 45vw; */
     /* width: 550px; */
@@ -588,7 +601,7 @@
         width: 90vw;
         /* height: 20vh; */
     }
-    .computer {
+    . {
         height: 1vh;
     }
     .Set {
@@ -618,6 +631,7 @@
     }
     .gasli{
         display: flex;
+        border-top:none;
         width: 90%;
         flex-direction: column;
     }
@@ -626,6 +640,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .cont {
+        color: #D8D7D7;
     }
     .sid-box{
         display: flex;
@@ -648,6 +665,7 @@
     .kasama{
         border-top: 2px solid grey;
         border-right: none;
+        background-color: #FFFFFF;
     }
     .both{
         display: flex;
@@ -685,6 +703,9 @@
     .forProfilePngAndAuthor {
         display: flex;
     }
+    .latestStoryText {
+        width: 90%;
+    }
     .newDiv{
         margin-left: 1em;
     }
@@ -693,8 +714,8 @@
         flex-direction: column;
     }
     #bigImg{
-        width: 100%;
-        height: 100%;
+        width: 115%;
+        min-height: 124%;
     }
     .reimage {
         min-width: 100%;
@@ -752,7 +773,7 @@
   .mainFirst{
     width: 95%;
   }
-  .computer {
+  . {
     position: relative;
     top: 60%;
   }
@@ -786,7 +807,10 @@
    #bigImg{
     display: flex;
     width: 46vw;
-    height: 53vh;
+    min-height: 54vh;
+   }
+   .latestStoryText{
+    width: 40%;
    }
    .mainfake1{
     width: 95%;

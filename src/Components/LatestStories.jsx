@@ -21,15 +21,15 @@ function LatestStories(props) {
   return (
     <div className="DownSide">
       <hr className="shiro" />
-      <h1>Latest Stories</h1>
+      <h1 className="latestStoryText">Latest Stories</h1>
       <div className="gasli">
         <div className="kasama">
           <div className="side-box">
             <Link style={{textDecoration:"none"}} to={`/Info/${data[0].name}`} state={{article:data[0],data:dataFromContext.bollywood}}>
               <h3 style={{color:"black",fontWeight:"bold"}}  className="heading">{data[0].name} </h3>
             </Link>
-            <p className="cont">{data[0].details}</p>
-            <p className='published'>{data[0].writtenBy}</p>
+            <p style={{color:"grey"}} className="cont">{data[0].details}</p>
+            <p className='published'>TECH / TODAY AT 11:54</p>
             <br />
           </div>
         </div>
@@ -38,8 +38,8 @@ function LatestStories(props) {
             <Link style={{textDecoration:"none"}} to={`/Info/${data[1].name}`} state={{article:data[1],data:dataFromContext.technology}}>
               <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data[1].name} </h3>
             </Link>
-            <p className="cont">{data[1].details}</p>
-            <p className='published'>{data[1].writtenBy}</p>
+            <p style={{color:"grey"}} className="cont">{data[1].details}</p>
+            <p className='published'>STYLE / AUGUST 30 2023</p>
             <br />
           </div>
         </div>
@@ -48,8 +48,8 @@ function LatestStories(props) {
             <Link style={{textDecoration:"none"}} to={`/Info/${data[2].name}`} state={{article:data[2],data:dataFromContext.fitness}}>
               <h3 style={{color:"black",fontWeight:"bold"}} className="heading">{data[2].name} </h3>
             </Link>
-            <p className="cont">{data[2].details}</p>
-            <p className='published'>{data[2].writtenBy}</p>
+            <p style={{color:"grey"}} className="cont">{data[2].details}</p>
+            <p className='published PSP'>FITNESS / SEPTEMBER 20 2023</p>
             <br />
           </div>
         </div>
