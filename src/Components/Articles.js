@@ -3,6 +3,7 @@ import "./Articles.css";
 import Navbar from "./Navbar";
 import CircularProgress from '@mui/material/CircularProgress';
 import { useParams,Link,useLocation } from "react-router-dom";
+import NewNav from "./NewNav";
 import axios from "axios";
 import TopPosts from "./TopPosts";
 export default function Articles() {
@@ -77,7 +78,10 @@ export default function Articles() {
         </div> */}
         
       </div>
-      <div style={{display:"flex",justifyContent:"center"}}>
+      <div className="footerDiv">
+        <NewNav />
+      </div>
+      {/* <div style={{display:"flex",justifyContent:"center"}}>
             <button className="loadMoreBtn"
                 onClick={() => {
                     setCount(count+7)
@@ -85,7 +89,7 @@ export default function Articles() {
                 >
                 Load More <img alt="loading" style={{display:"flex",width:"100%",height:"3em"}} className="dwnArrow" src="https://cdn-icons-png.flaticon.com/128/2989/2989995.png"/>
             </button>
-      </div>
+      </div> */}
       </>
     ) 
     } else {

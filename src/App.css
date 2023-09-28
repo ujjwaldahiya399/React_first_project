@@ -349,6 +349,9 @@ header li{
     align-items: center;
     margin-top: 2em;
   }
+  #NavHr {
+    width: 95vw;
+  }
   
   .xyz{
     display: block;
@@ -432,6 +435,12 @@ header li{
   .text-content2
   {
     padding: 20px;
+  }
+  .theSiren{
+    /* display: flex; */
+    justify-content: flex-start;
+    margin-left: 1.5em;
+    margin-top: 1em;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

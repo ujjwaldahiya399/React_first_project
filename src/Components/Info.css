@@ -343,5 +343,9 @@ hr{
         position: sticky;
         right: 0%;
     }
+    .moreFromSirenDiv {
+        width: 95vw;
+        margin-left: 4em;
+    }
 
 }

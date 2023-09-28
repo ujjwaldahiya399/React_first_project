@@ -5,6 +5,7 @@ import Top2 from "./Top2";
 import "../App.css";
 import myContext from "./context";
 import LatestStories from "./LatestStories";
+import NewNav from "./NewNav";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 // import "./Media.css";
@@ -186,6 +187,11 @@ function Home() {
           <div className="latestStoriesDiv">
             <LatestStories propsToLatestStories={data.latestStories} />
           </div>
+
+         {/* Footer */}
+        <div className="footerDiv">
+          <NewNav/>
+        </div>
         </div>
         </myContext.Provider>
       </>

@@ -1,5 +1,6 @@
 import React from "react";
 import './Info.css';
+import NewNav from "./NewNav";
 import { useLocation, useNavigate,Link } from "react-router-dom";
 function Info() {
   // let [data,setData] = useState();
@@ -146,6 +147,9 @@ function Info() {
           >
             <img src="https://cdn-icons-png.flaticon.com/128/3415/3415823.png" alt="backBtnIcon" className="backBtnIcon" />
           </button>
+        </div>
+        <div className="footerDiv">
+          {/* <NewNav/> */}
         </div>
       </div>
     </div>

@@ -532,6 +532,9 @@
     height: 200px;
     margin-top: 10px;
 }
+.footerDiv {
+    width: 100%;
+}
 .someClas {
     display: flex;
 }
@@ -726,11 +729,19 @@
     .mainfake {
         width: 95%;
     }
+    .footerDiv {
+        /* margin-left: 1em; */
+        width: 99vw;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .SweetHome {
     width: 95%;
   }
+  .footerDiv {
+    margin-left: 5em;
+    width: 99vw;
+}
   .Topper {
     padding: 0px;
     width: 90%;
@@ -760,7 +771,7 @@
   }
   .DownSide {
     margin-left: 0px;
-    width: 87%;
+    width: 99%;
     border: none;
     padding: 0px;
   }

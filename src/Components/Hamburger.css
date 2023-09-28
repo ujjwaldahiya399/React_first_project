@@ -20,6 +20,10 @@
   }
   @media (max-width: 767px) {
     .hamburger {
+      position: absolute;
+      width: auto;
+      left: 40%;
+      top: 0%;
       display: flex;
       padding-top: 10px;
       justify-content: space-around;

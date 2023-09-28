@@ -1,0 +1,84 @@
+/* Footer.css */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.registration input {
+    width: 250px;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.registration button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+/* For Tablets (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+
+    .registration {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .registration input {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+/* For Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .footer-content {
+        padding: 10px;
+    }
+
+    .social-media a {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .registration input {
+        width: 100%;
+        margin-right: 0;
+        padding: 6px;
+    }
+    .registration{
+        display: flex;
+    }
+}
