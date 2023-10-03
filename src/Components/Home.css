@@ -533,7 +533,8 @@
     margin-top: 10px;
 }
 .footerDiv {
-    width: 100%;
+    width: 98.6vw;
+    margin-left: 0.2em;
 }
 .someClas {
     display: flex;
@@ -739,7 +740,7 @@
     width: 95%;
   }
   .footerDiv {
-    margin-left: 5em;
+    /* margin-left: 5em; */
     width: 99vw;
 }
   .Topper {

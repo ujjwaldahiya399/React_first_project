@@ -13,12 +13,15 @@
 .infoAboutArticle{
     display: flex;
     flex-direction: column;
-    /* width: 50vw; */
+    width: 98%;
     justify-content: center;
     align-items: center;
 
 }
 .moreFromSirenDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 .land{
@@ -210,13 +213,16 @@ hr{
         display: inline-flex;
     }
     .img{
+        margin-left: 2.5em;
         width:80vw
     }
     .infoTitle{
+        margin-left: 2.5em;
         width: 80vw;
         text-align: center;
     }
     .discrption{
+        margin-left: 2.5em;
         width: 80vw;
     }
     .likeBox {
@@ -232,6 +238,7 @@ hr{
         width: 80vw;
     }
     .firstDiv{
+        margin-left: 1.5em;
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
@@ -244,6 +251,7 @@ hr{
         height: 11vh;
     }
     .secondDiv {
+        margin-left: 1.5em;
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
@@ -270,6 +278,7 @@ hr{
     }
     
     .thirdDiv{
+        margin-left: 1.5em;
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
@@ -286,19 +295,23 @@ hr{
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .land {
+        margin-left: 2.3em;
         width: 90vw;
     }
     .infoTitle{
         width: 60vw;
     }
     .img {
+        margin-left: 2.3em;
         width: 80%;
     }
     .infoTitle{
+        margin-left: 2.3em;
         width: 80%;
         font-size: xx-large;
     }
     .discrption {
+        margin-left: 2.3em;
         width: 80%;
         font-weight: 600;
         font-size: x-large;
@@ -345,7 +358,7 @@ hr{
     }
     .moreFromSirenDiv {
         width: 95vw;
-        margin-left: 4em;
+        margin-left: 6em;
     }
 
 }
