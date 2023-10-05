@@ -533,8 +533,8 @@
     margin-top: 10px;
 }
 .footerDiv {
-    width: 100%;
-    /* margin-left: 1em; */
+    width: 98.2vw;
+    margin-left: 0.5em;
 }
 .someClas {
     display: flex;
